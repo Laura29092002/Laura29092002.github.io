@@ -1,0 +1,89 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f4b4b7;
+    border-radius: 10px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #ed9ec4;
+}
+
+div {
+    float: left;
+    height: 230px;
+    width: 23%;
+    padding: 0 10px;
+    color: #3c5d79;
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease; /* Ajoute une transition de transformation de 0.3s pour l'effet en douceur */
+  }
+
+  div:hover {
+    transform: scale(1.05); /* Augmente légèrement la taille de l'élément au survol */
+}
+
+
+  #left {
+    background-color: #FDDADC;
+    width: 43%;
+    margin-right: 10px;
+    margin-left: 50px;
+    border-radius: 10px;
+    margin-bottom: 150px;
+  }
+  #right {
+    background-color: #e0d4eb;
+    width: 43%;
+    border-radius: 10px;
+    margin-bottom: 150px;
+  }
+
+  h1{
+    color: #3c5d79;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.avatar{
+    width : 45px;
+    height : 45px;
+    padding-left: 230px;
+}
+
+img{
+  width: 150px;
+  height: 150px;
+
+}
+
+.text-gauche{
+  background-color:  #e0d4eb;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.text-droite{
+  background-color:  #FDDADC;
+  border-radius: 10px;
+  padding: 20px;
+}
+

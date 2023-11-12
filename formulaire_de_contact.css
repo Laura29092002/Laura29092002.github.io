@@ -1,0 +1,123 @@
+
+.menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:  #f4b4b7;
+    border-radius: 10px;
+    
+}
+
+.li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #faa2af;
+}
+
+/* Style de base pour le formulaire */
+form {
+    padding-left: 600px;
+    padding-right: 100px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Style pour les champs de texte */
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 3px solid #f9f5f5;
+    background-color: #e6e1eb;
+    border-radius: 4px;
+  }
+  
+  /* Style pour les étiquettes des champs */
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #3c5d79;
+
+  }
+  
+  textarea {
+    width: 100%;
+    height: 100px; /* Vous pouvez ajuster la hauteur selon vos besoins */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 3px solid #f9f5f5;
+    background-color: #e6e1eb;
+    border-radius: 4px;
+    resize: vertical; /* Permet la redimension verticale uniquement */
+  }
+
+  div .left{
+    float : left;
+    padding-left: 100px;
+}
+
+img {
+    width : 380px;
+    height : 350px;
+    }
+
+    ul {
+        list-style-type: none;
+      }
+
+      .content
+    {
+    
+    /* style */
+    border: solid;
+    border-color: #e0d4eb ;
+    border-radius: 10px;
+    background-color: #e0d4eb;
+    margin: 50px;
+    
+}
+
+h1{
+    color: #3c5d79;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+
+.avatar{
+  width : 45px;
+  height : 45px;
+  padding-left: 230px;
+}
+
+button {
+  background-color:#faa2af; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  padding: 10px 20px; /* Espacement interne (haut/bas, gauche/droite) */
+  border: none; /* Supprime la bordure */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Curseur de la souris au survol */
+}
+
+.content{
+  transition: transform 0.3s ease;
+}
+
+.content:hover {
+  transform: scale(1.05); /* Augmente légèrement la taille de l'élément au survol */
+}

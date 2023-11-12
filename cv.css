@@ -1,0 +1,59 @@
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f4b4b7;
+    border-radius: 10px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #ed9ec4;
+}
+
+img {
+    width : 130px;
+    height : 130px;
+    }
+
+    .mes_coordonnees
+    {
+    float : right;
+    /* style */
+    border: solid;
+    border-color:  #e0d4eb;
+    background-color: #e0d4eb;
+    border-radius: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-right: 20px;
+    color: #3c5d79;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+.avatar{
+    width : 45px;
+    height : 45px;
+    padding-left: 200px;
+}
+
+
+
+  
+  
