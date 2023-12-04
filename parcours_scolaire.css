@@ -5,6 +5,9 @@ ul {
     overflow: hidden;
     background-color: #f4b4b7;
     border-radius: 10px;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
 }
 
 li {
