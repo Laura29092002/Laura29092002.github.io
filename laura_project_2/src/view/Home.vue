@@ -21,7 +21,6 @@ import Projects from '@/components/Projects.vue'
             <School :step="step" />
           </div>
         </div>
-
         <div class="school">
           <div v-for="step in professionalData">
             <School :step="step" />

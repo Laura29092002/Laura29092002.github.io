@@ -16,6 +16,8 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@amineyarman/kinesis": "^1.0.6",
+    "floating-vue": "^5.2.2",
     "vue": "^3.5.22",
     "vue-router": "^4.6.3"
   },

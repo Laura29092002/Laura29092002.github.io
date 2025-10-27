@@ -8,7 +8,6 @@ import { RouterView } from 'vue-router'
 
 <style>
 #app {
-  display: flex;
   justify-content: center;
 }
 </style>
