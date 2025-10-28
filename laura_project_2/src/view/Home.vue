@@ -16,16 +16,20 @@ import Projects from '@/components/Projects.vue'
     </header>
     <div class="main">
       <div class="aboutMe" id="aboutMe">
-        <div class="school">
+        <div class="timeline-container">
+        <div class="timeline-item">
           <div v-for="step in schoolData">
             <School :step="step" />
           </div>
         </div>
-        <div class="school">
+        </div>
+        <div class="timeline-container">
+        <div class="timeline-item">
           <div v-for="step in professionalData">
             <School :step="step" />
           </div>
         </div>  
+        </div>
       </div>
       <Projects/>
     </div>
@@ -47,14 +51,6 @@ import Projects from '@/components/Projects.vue'
 }
 .aboutMe {
   display: flex;
-  justify-content: space-between;
-}
-.school {
-  display: flex;
-  flex-direction: column;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 350px;
 }
 header {
   top: 0;
@@ -63,4 +59,18 @@ header {
 footer {
   bottom: 0;
 }
+
+.timeline-container {
+  flex: 0.5;
+  position: relative;
+  margin: 2rem auto;
+  padding-left: 2rem;
+  max-width: 600px;
+}
+
+.timeline-item {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
 </style>

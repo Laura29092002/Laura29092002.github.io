@@ -9,5 +9,6 @@ import { RouterView } from 'vue-router'
 <style>
 #app {
   justify-content: center;
+  align-items: center;
 }
 </style>

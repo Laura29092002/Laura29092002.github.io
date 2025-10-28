@@ -13,7 +13,9 @@ initializeKinesis()
             data-ks-transform="translate"
             data-ks-strength="15"
           >
-            <div v-tooltip.bottom ="'You have new messages.'" class="circle right"></div>
+            <div v-tooltip.bottom ="'You have new messages.'" class="left">
+              <img src="C:\Users\lmussard\Documents\Portfolio\Laura29092002.github.io\laura_project_2\src\assets\flore.png" alt="icon" />
+            </div>
             </div>
 
             <div
@@ -21,7 +23,19 @@ initializeKinesis()
             data-ks-transform="translate"
             data-ks-strength="23"
           >
-            <div v-tooltip.bottom ="'You have new messages.'" class="circle left"></div>
+            <div v-tooltip.bottom ="'You have new messages.'" class="right">
+              <img src="C:\Users\lmussard\Documents\Portfolio\Laura29092002.github.io\laura_project_2\src\assets\flore.png" alt="icon" />
+            </div>
+            </div>
+
+            <div
+            data-kinesistransformer-element
+            data-ks-transform="translate"
+            data-ks-strength="23"
+          >
+            <div v-tooltip.bottom ="'You have new messages.'" class="left_2">
+              <img src="C:\Users\lmussard\Documents\Portfolio\Laura29092002.github.io\laura_project_2\src\assets\flore.png" alt="icon" />
+            </div>
             </div>
             <div
             data-kinesistransformer-element
@@ -33,16 +47,29 @@ initializeKinesis()
             <div
             data-kinesistransformer-element
             data-ks-transform="translate"
+            data-ks-strength="23"
+          >
+            <div v-tooltip.bottom ="'You have new messages.'" class="right_2">
+              <img src="C:\Users\lmussard\Documents\Portfolio\Laura29092002.github.io\laura_project_2\src\assets\flore.png" alt="icon" />
+            </div>
+            </div>
+            <div
+            data-kinesistransformer-element
+            data-ks-transform="translate"
             data-ks-strength="-15"
           >
-            <div v-tooltip.bottom ="'You have new messages.'" class="circle right"></div>
+            <div v-tooltip.bottom ="'You have new messages.'" class="left">
+              <img src="C:\Users\lmussard\Documents\Portfolio\Laura29092002.github.io\laura_project_2\src\assets\flore.png" alt="icon" />
+            </div>
             </div>
             <div
             data-kinesistransformer-element
             data-ks-transform="translate"
             data-ks-strength="-25"
           >
-            <div v-tooltip.bottom ="'You have new messages.'" class="circle left"></div>
+            <div v-tooltip.bottom ="'You have new messages.'" class="right">
+              <img src="C:\Users\lmussard\Documents\Portfolio\Laura29092002.github.io\laura_project_2\src\assets\flore.png" alt="icon" />
+            </div>
             </div>
           
         </div>        </div>
@@ -52,26 +79,44 @@ initializeKinesis()
 .top {
   text-align: center;
   padding-bottom: 60px;
-  background-image: url("");
+  
 }
+
+
 h1 {
   font-size: 50px;
+  font-family: "Caprasimo", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #722535;
+  text-shadow: 2px 2px 5px rgb(188, 188, 188);
 }
 h2 {
   font-size: 35px;
+  font-family: "Caprasimo", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #9B747C;
+  text-shadow: 2px 2px 5px rgb(188, 188, 188);
 }
-.circle {
-  width: 150px;
-  height: 150px;
-  background-color: #eeb1b5; 
-  box-shadow: 0 10px 40px rgba(204, 206, 214, 0.8);
-  border-radius: 50%; 
+
+img{
+  width: 100px;
+  height: 100px;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
 }
 .left {
-  margin-left: 200px;
+  margin-right: 600px;
+}
+.left_2 {
+  margin-right: 1000px;
 }
 .right {
-  margin-left: 1200px;
+  margin-left: 600px;
+}
+
+.right_2 {
+  margin-left: 1000px;
 }
 
 </style>
