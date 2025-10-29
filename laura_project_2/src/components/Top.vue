@@ -1,6 +1,5 @@
 <script>
 import { initializeKinesis } from '@amineyarman/kinesis'
-import 'floating-vue/dist/style.css'
 initializeKinesis()
 </script>
 
@@ -23,7 +22,7 @@ initializeKinesis()
             data-ks-transform="translate"
             data-ks-strength="23"
           >
-            <div v-tooltip.bottom ="'You have new messages.'" class="right">
+            <div class="right">
               <img src="../assets/flore.png" alt="icon" />
             </div>
             </div>
@@ -41,7 +40,7 @@ initializeKinesis()
             data-kinesistransformer-element
             data-ks-transform="translate"
           >
-            <h1>MUSSARD LAURA</h1>
+            <h1>LAURA MUSSARD</h1>
             <h2>Développeuse Full-Stack</h2>
             </div>
             <div
@@ -79,6 +78,7 @@ initializeKinesis()
 .top {
   text-align: center;
   padding-bottom: 60px;
+  align-items: center;
   
 }
 

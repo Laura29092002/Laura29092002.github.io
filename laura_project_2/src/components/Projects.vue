@@ -1,145 +1,121 @@
-<script setup lang="ts">
-import { ref } from 'vue';
-
-interface CarouselItem {
-  id: number;
-  title: string;
-  content: string;
-}
-
-const currentIndex = ref(0);
-
-const items: CarouselItem[] = [
-  { id: 1, title: 'Slide 1', content: 'Premier élément' },
-  { id: 2, title: 'Slide 2' , content: 'Deuxième élément' },
-  { id: 3, title: 'Slide 3', content: 'Troisième élément' },
-  { id: 4, title: 'Slide 4', content: 'Quatrième élément' },
-];
-
-const goToPrevious = () => {
-  currentIndex.value = currentIndex.value === 0 
-    ? items.length - 1 
-    : currentIndex.value - 1;
-};
-
-const goToNext = () => {
-  currentIndex.value = currentIndex.value === items.length - 1 
-    ? 0 
-    : currentIndex.value + 1;
-};
-
-const goToSlide = (index: number) => {
-  currentIndex.value = index;
-};
-</script>
-
 <template>
-  <div class="carousel-container" id="projects">
-    <div class="carousel">
-      <div 
-        class="carousel-track"
-        :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
+  <div
+        data-kinesisscroll-item
+        data-ks-strength="-50"
+        data-ks-transformaxis="Y"
       >
-        <div 
-          v-for="item in items" 
-          :key="item.id"
-          :class="['carousel-slide']"
-        >
-          <h2>{{ item.title }}</h2>
-          <p>{{ item.content }}</p>
-        </div>
-      </div>
-
-      <!-- Boutons de navigation -->
-      <button @click="goToPrevious" class="nav-btn prev">
-        ←
-      </button>
-      <button @click="goToNext" class="nav-btn next">
-        →
-      </button>
-
-      <!-- Indicateurs -->
-      <div class="indicators">
-        <button
-          v-for="(item, index) in items"
-          :key="index"
-          @click="goToSlide(index)"
-          :class="['indicator', { active: index === currentIndex }]"
-        />
-      </div>
-    </div>
+  <h2 id="projects">Mes Projets</h2>
+  <div class="background">
+  <swiper
+    :effect="'coverflow'"
+    :grabCursor="true"
+    :initialSlide="2"
+    :centeredSlides="true"
+    :slidesPerView="'auto'"
+    :coverflowEffect="{
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    }"
+    :pagination="pagination"
+    :modules="modules"
+    class="mySwiper"
+  >
+    <swiper-slide
+      ><img src="../assets/flore.png" alt="icon" /></swiper-slide
+    ><swiper-slide
+      ><img src="../assets/flore.png" alt="icon" /></swiper-slide
+    ><swiper-slide
+      ><img src="../assets/flore.png" alt="icon" /></swiper-slide
+    ><swiper-slide
+      ><img src="../assets/flore.png" alt="icon" /></swiper-slide
+    ><swiper-slide
+      ><img src="../assets/flore.png" alt="icon" /></swiper-slide
+    >
+    <swiper-slide
+      ><img src="../assets/flore.png" alt="icon" /></swiper-slide
+    >
+  </swiper>
+  </div>
   </div>
 </template>
 
-<style scoped>
-.carousel-container {
-  max-width: 800px;
-  margin: 0 auto;
+<script>
+  // Import Swiper Vue.js components
+  import { Swiper, SwiperSlide } from 'swiper/vue';
+
+  // Import Swiper styles
+  import 'swiper/css';
+
+  import 'swiper/css/effect-coverflow';
+  import 'swiper/css/pagination';
+
+  // import required modules
+  import { EffectCoverflow, Pagination } from 'swiper/modules';
+
+  export default {
+    components: {
+      Swiper,
+      SwiperSlide,
+    },
+    setup() {
+      return {
+        pagination:{
+          clickable: true,
+        },
+        modules: [EffectCoverflow, Pagination],
+      };
+    },
+  };
+</script>
+
+
+
+<style>
+h2{
+  text-align: center;
+  color: #722535;
+  font-family: "Caprasimo", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+}
+.background {
+  background-color: #a3888d;
+  padding: 50px;
+}
+.swiper {
+  width: 80%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-.carousel {
-  position: relative;
-  height: 400px;
-  overflow: hidden;
-  border-radius: 16px;
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
 }
 
-.carousel-track {
-  display: flex;
-  height: 100%;
-  transition: transform 0.5s ease-in-out;
+.swiper-pagination-bullet-active {
+  background: #722535;
 }
 
-.carousel-slide {
-  min-width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: black;
+
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
 }
 
-.nav-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.3);
-  border: none;
-  color: black;
-  font-size: 24px;
-  padding: 12px 16px;
-  cursor: pointer;
-  border-radius: 50%;
+.swiper-slide img {
+  display: block;
+  width: 100%;
 }
 
-.nav-btn:hover {
-  background: rgba(32, 32, 32, 0.164);
-}
 
-.prev { left: 16px; }
-.next { right: 16px; }
-
-.indicators {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-}
-
-.indicator {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(143, 143, 143, 0.692);
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.indicator.active {
-  width: 32px;
-  background: rgb(0, 0, 0);
-}
 </style>

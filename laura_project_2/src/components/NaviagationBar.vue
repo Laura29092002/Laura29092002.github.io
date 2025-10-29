@@ -34,10 +34,10 @@ items.forEach((item, index) => {
     
     <a href="#top" class="nav-item is-active" data-target="Home">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-birdhouse-icon lucide-birdhouse"><path d="M12 18v4"/><path d="m17 18 1.956-11.468"/><path d="m3 8 7.82-5.615a2 2 0 0 1 2.36 0L21 8"/><path d="M4 18h16"/><path d="M7 18 5.044 6.532"/><circle cx="12" cy="10" r="2"/></svg>
-      HOME
+      ACCUEIL
     </a>
-    <a href="#aboutMe" class="nav-item" data-target="About me">ABOUT ME</a>
-    <a href="#projects" class="nav-item" data-target="My projects">MY PROJECTS</a>
+    <a href="#aboutMe" class="nav-item" data-target="About me">A PROPOS</a>
+    <a href="#projects" class="nav-item" data-target="My projects">MES PROJETS</a>
     <a href="#contact" class="nav-item" data-target="Contact">CONTACT</a>
     <span class="nav-indicator"></span>
   </nav>
@@ -51,7 +51,7 @@ items.forEach((item, index) => {
 }
 
 nav {
-  margin-top: 25px;
+  margin-top: 10px;
   display: flex;
   overflow: hidden;
   overflow-x: auto;
@@ -63,8 +63,8 @@ nav {
   color: #722535;
   align-items: center;
   display: inline-flex; 
+  font-weight: bold;
   gap: 8px;
-  font-family: arial, sans-serif;
   padding: 20px;
   margin: 0 40px;
   position: relative;
@@ -74,16 +74,19 @@ nav {
   content: '';
   position: absolute;
   bottom: -6px;
-  background-color: #eae4df;
+  background-color: #cdb9bd;
+  border-radius: 12px;
   height: 5px;
   width: 100%;
   left: 0;
   transition: 0.3s;
+  
 }
 
-.nav-item:not(.is-active):hover:before {
+.nav-item:hover:before {
   bottom: 0;
 }
+
 
 .nav-indicator {
   position: absolute;

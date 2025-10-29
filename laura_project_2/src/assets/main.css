@@ -1,4 +1,6 @@
-body{
-    background-color: #ffffff;
-    
+
+html, body {
+  overflow-x: hidden;
+  background-color: #fbf0f0;
+  font-family: "Nunito", sans-serif;
 }
