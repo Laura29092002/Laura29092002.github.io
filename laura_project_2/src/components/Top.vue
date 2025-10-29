@@ -13,7 +13,7 @@ initializeKinesis()
             data-ks-transform="translate"
             data-ks-strength="15"
           >
-            <div v-tooltip.bottom ="'You have new messages.'" class="left">
+            <div class="left">
               <img src="C:\Users\lmussard\Documents\Portfolio\Laura29092002.github.io\laura_project_2\src\assets\flore.png" alt="icon" />
             </div>
             </div>
@@ -33,7 +33,7 @@ initializeKinesis()
             data-ks-transform="translate"
             data-ks-strength="23"
           >
-            <div v-tooltip.bottom ="'You have new messages.'" class="left_2">
+            <div class="left_2">
               <img src="C:\Users\lmussard\Documents\Portfolio\Laura29092002.github.io\laura_project_2\src\assets\flore.png" alt="icon" />
             </div>
             </div>
@@ -49,7 +49,7 @@ initializeKinesis()
             data-ks-transform="translate"
             data-ks-strength="23"
           >
-            <div v-tooltip.bottom ="'You have new messages.'" class="right_2">
+            <div class="right_2">
               <img src="C:\Users\lmussard\Documents\Portfolio\Laura29092002.github.io\laura_project_2\src\assets\flore.png" alt="icon" />
             </div>
             </div>
@@ -58,7 +58,7 @@ initializeKinesis()
             data-ks-transform="translate"
             data-ks-strength="-15"
           >
-            <div v-tooltip.bottom ="'You have new messages.'" class="left">
+            <div class="left">
               <img src="C:\Users\lmussard\Documents\Portfolio\Laura29092002.github.io\laura_project_2\src\assets\flore.png" alt="icon" />
             </div>
             </div>
@@ -67,7 +67,7 @@ initializeKinesis()
             data-ks-transform="translate"
             data-ks-strength="-25"
           >
-            <div v-tooltip.bottom ="'You have new messages.'" class="right">
+            <div class="right">
               <img src="C:\Users\lmussard\Documents\Portfolio\Laura29092002.github.io\laura_project_2\src\assets\flore.png" alt="icon" />
             </div>
             </div>
