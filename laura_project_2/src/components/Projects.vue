@@ -1,89 +1,75 @@
 <template>
-  <div
-        data-kinesisscroll-item
-        data-ks-strength="-50"
-        data-ks-transformaxis="Y"
+  <div data-kinesisscroll-item data-ks-strength="-50" data-ks-transformaxis="Y">
+    <h2 id="projects">Mes Projets</h2>
+    <div class="background">
+      <swiper
+        :effect="'coverflow'"
+        :grabCursor="true"
+        :initialSlide="2"
+        :centeredSlides="true"
+        :slidesPerView="'auto'"
+        :coverflowEffect="{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }"
+        :pagination="pagination"
+        :modules="modules"
+        class="mySwiper"
       >
-  <h2 id="projects">Mes Projets</h2>
-  <div class="background">
-  <swiper
-    :effect="'coverflow'"
-    :grabCursor="true"
-    :initialSlide="2"
-    :centeredSlides="true"
-    :slidesPerView="'auto'"
-    :coverflowEffect="{
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true,
-    }"
-    :pagination="pagination"
-    :modules="modules"
-    class="mySwiper"
-  >
-    <swiper-slide
-      ><img src="../assets/flore.png" alt="icon" /></swiper-slide
-    ><swiper-slide
-      ><img src="../assets/flore.png" alt="icon" /></swiper-slide
-    ><swiper-slide
-      ><img src="../assets/flore.png" alt="icon" /></swiper-slide
-    ><swiper-slide
-      ><img src="../assets/flore.png" alt="icon" /></swiper-slide
-    ><swiper-slide
-      ><img src="../assets/flore.png" alt="icon" /></swiper-slide
-    >
-    <swiper-slide
-      ><img src="../assets/flore.png" alt="icon" /></swiper-slide
-    >
-  </swiper>
-  </div>
+        <swiper-slide><img src="../assets/flore.png" alt="icon" /></swiper-slide
+        ><swiper-slide><img src="../assets/flore.png" alt="icon" /></swiper-slide
+        ><swiper-slide><img src="../assets/flore.png" alt="icon" /></swiper-slide
+        ><swiper-slide><img src="../assets/flore.png" alt="icon" /></swiper-slide
+        ><swiper-slide><img src="../assets/flore.png" alt="icon" /></swiper-slide>
+        <swiper-slide><img src="../assets/flore.png" alt="icon" /></swiper-slide>
+      </swiper>
+    </div>
   </div>
 </template>
 
 <script>
-  // Import Swiper Vue.js components
-  import { Swiper, SwiperSlide } from 'swiper/vue';
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from 'swiper/vue'
 
-  // Import Swiper styles
-  import 'swiper/css';
+// Import Swiper styles
+import 'swiper/css'
 
-  import 'swiper/css/effect-coverflow';
-  import 'swiper/css/pagination';
+import 'swiper/css/effect-coverflow'
+import 'swiper/css/pagination'
 
-  // import required modules
-  import { EffectCoverflow, Pagination } from 'swiper/modules';
+// import required modules
+import { EffectCoverflow, Pagination } from 'swiper/modules'
 
-  export default {
-    components: {
-      Swiper,
-      SwiperSlide,
-    },
-    setup() {
-      return {
-        pagination:{
-          clickable: true,
-        },
-        modules: [EffectCoverflow, Pagination],
-      };
-    },
-  };
+export default {
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  setup() {
+    return {
+      pagination: {
+        clickable: true,
+      },
+      modules: [EffectCoverflow, Pagination],
+    }
+  },
+}
 </script>
 
-
-
 <style>
-h2{
+h2 {
+  color: var(--primary-color);
   text-align: center;
-  color: #722535;
-  font-family: "Caprasimo", serif;
+  font-family: 'Caprasimo', serif;
   font-weight: 400;
   font-style: normal;
   font-size: 30px;
 }
 .background {
-  background-color: #a3888d;
+  background-color: var(--secondary-color);
   padding: 50px;
 }
 .swiper {
@@ -100,10 +86,8 @@ h2{
 }
 
 .swiper-pagination-bullet-active {
-  background: #722535;
+  background: var(--primary-color);
 }
-
-
 
 .swiper-slide {
   background-position: center;
@@ -116,6 +100,4 @@ h2{
   display: block;
   width: 100%;
 }
-
-
 </style>

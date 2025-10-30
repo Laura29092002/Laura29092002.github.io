@@ -1,6 +1,46 @@
 
-html, body {
-  overflow-x: hidden;
-  background-color: #fbf0f0;
-  font-family: "Nunito", sans-serif;
+:root {
+  --bg-color: #fffcfc;
+  --shadow: rgba(30, 50, 78, 0.5);
+  --text-color: #a86e8c;
+  --primary-color: #9d2c68;
+  --secondary-color: #F6EFA6;
+  --trerciary-color: #45D272;
 }
+
+[data-theme="dark"] {
+  --bg-color: #1b1216; 
+  --shadow: rgba(30, 50, 78, 0.7);
+  --text-color: #f5c9d9;      
+  --primary-color: #e44489;  
+  --secondary-color: #b3a865; 
+  --trerciary-color: #5ce88c; 
+}
+
+
+body {
+  overflow-x: hidden;
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Conteneur global ou body */
+body::-webkit-scrollbar {
+  width: 14px; 
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 30px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color); 
+  border-radius: 30px;
+  border: 3px solid var(--text-color);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--secondary-color); 
+}
+

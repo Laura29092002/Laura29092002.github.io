@@ -31,9 +31,26 @@ items.forEach((item, index) => {
 </script>
 <template>
   <nav>
-    
     <a href="#top" class="nav-item is-active" data-target="Home">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-birdhouse-icon lucide-birdhouse"><path d="M12 18v4"/><path d="m17 18 1.956-11.468"/><path d="m3 8 7.82-5.615a2 2 0 0 1 2.36 0L21 8"/><path d="M4 18h16"/><path d="M7 18 5.044 6.532"/><circle cx="12" cy="10" r="2"/></svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-birdhouse-icon lucide-birdhouse"
+      >
+        <path d="M12 18v4" />
+        <path d="m17 18 1.956-11.468" />
+        <path d="m3 8 7.82-5.615a2 2 0 0 1 2.36 0L21 8" />
+        <path d="M4 18h16" />
+        <path d="M7 18 5.044 6.532" />
+        <circle cx="12" cy="10" r="2" />
+      </svg>
       ACCUEIL
     </a>
     <a href="#aboutMe" class="nav-item" data-target="About me">A PROPOS</a>
@@ -44,7 +61,6 @@ items.forEach((item, index) => {
 </template>
 
 <style scoped>
-/* On fait en sorte que chaque élément contienne sa marge interne avec box-sizing et on retire les traits qui sont par défaut sur les liens */
 * {
   box-sizing: border-box;
   text-decoration: none;
@@ -60,9 +76,9 @@ nav {
 }
 
 .nav-item {
-  color: #722535;
+  color: var(--text-color);
   align-items: center;
-  display: inline-flex; 
+  display: inline-flex;
   font-weight: bold;
   gap: 8px;
   padding: 20px;
@@ -74,19 +90,17 @@ nav {
   content: '';
   position: absolute;
   bottom: -6px;
-  background-color: #cdb9bd;
+  background-color: var(--secondary-color);
   border-radius: 12px;
   height: 5px;
   width: 100%;
   left: 0;
   transition: 0.3s;
-  
 }
 
 .nav-item:hover:before {
   bottom: 0;
 }
-
 
 .nav-indicator {
   position: absolute;
@@ -97,7 +111,7 @@ nav {
   border-radius: 8px 8px 0 0;
 }
 
-svg{
-  color: #722535;
+svg {
+  color: var(--text-color);
 }
 </style>
