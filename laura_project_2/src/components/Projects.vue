@@ -4,10 +4,14 @@
     <div class="background">
       <swiper
         :effect="'coverflow'"
+        :loop="true"
         :grabCursor="true"
-        :initialSlide="2"
         :centeredSlides="true"
         :slidesPerView="'auto'"
+        :autoplay="{
+          delay: 5000,
+          disableOnInteraction: false,
+        }"
         :coverflowEffect="{
           rotate: 50,
           stretch: 0,
@@ -19,9 +23,9 @@
         :modules="modules"
         class="mySwiper"
       >
-        <swiper-slide><img src="../assets/flore.png" alt="icon" /></swiper-slide
-        ><swiper-slide><img src="../assets/flore.png" alt="icon" /></swiper-slide
-        ><swiper-slide><img src="../assets/flore.png" alt="icon" /></swiper-slide
+        <swiper-slide><img src="../assets/test.png" alt="icon" /></swiper-slide
+        ><swiper-slide><img src="../assets/rose.png" alt="icon" /></swiper-slide
+        ><swiper-slide><img src="../assets/onglet.png" alt="icon" /></swiper-slide
         ><swiper-slide><img src="../assets/flore.png" alt="icon" /></swiper-slide
         ><swiper-slide><img src="../assets/flore.png" alt="icon" /></swiper-slide>
         <swiper-slide><img src="../assets/flore.png" alt="icon" /></swiper-slide>
@@ -31,17 +35,15 @@
 </template>
 
 <script>
-// Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue'
 
-// Import Swiper styles
+
 import 'swiper/css'
 
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
 
-// import required modules
-import { EffectCoverflow, Pagination } from 'swiper/modules'
+import {Autoplay, EffectCoverflow, Pagination } from 'swiper/modules'
 
 export default {
   components: {
@@ -53,7 +55,7 @@ export default {
       pagination: {
         clickable: true,
       },
-      modules: [EffectCoverflow, Pagination],
+      modules: [Autoplay, EffectCoverflow, Pagination],
     }
   },
 }

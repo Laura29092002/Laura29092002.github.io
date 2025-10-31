@@ -187,7 +187,7 @@ img {
 .flower-center-bas {
   position: absolute;
   top: 100%;        
-  left: 55%;       
+  left: 50%;       
   transform: translate(-50%, -50%);
   z-index: 0;      
 }

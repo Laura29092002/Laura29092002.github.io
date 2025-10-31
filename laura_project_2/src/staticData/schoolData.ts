@@ -18,7 +18,7 @@ export const schoolData: schoolStep[] = [
     direction: 'right',
   },
   {
-    title: 'Baccalaureat Scientifique - Mention Bien',
+    title: 'Baccalaureat Scientifique',
     period: '2020',
     description: '',
     place: 'Lycée Pierre Poivre - Réunion (97480)',

@@ -3,7 +3,6 @@ const indicator = document.querySelector('.nav-indicator')
 const items = document.querySelectorAll('.nav-item')
 
 function handleIndicator(el) {
-  // Boucler sur items -> retirer la classe "is-active"
   items.forEach((item) => {
     item.classList.remove('is-active')
     item.removeAttribute('style')
@@ -12,12 +11,10 @@ function handleIndicator(el) {
   const elementColor = 'pink'
   const target = el.dataset.target
 
-  // Styliser l'indicateur
   indicator.style.width = `${el.offsetWidth}px`
   indicator.style.backgroundColor = elementColor
   indicator.style.left = `${el.offsetLeft}px`
 
-  // Ajout la classe is-active
   el.classList.add('is-active')
   el.style.color = elementColor
 }

@@ -24,4 +24,5 @@ export const professionalData: schoolStep[] = [
     place: 'Ezymob - Paris (75002) - Stage',
     direction: 'left',
   },
+  
 ]

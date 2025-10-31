@@ -4,7 +4,7 @@
   --shadow: rgba(30, 50, 78, 0.5);
   --text-color: #a86e8c;
   --primary-color: #9d2c68;
-  --secondary-color: #F6EFA6;
+  --secondary-color: #ded794;
   --trerciary-color: #45D272;
 }
 
@@ -13,7 +13,7 @@
   --shadow: rgba(30, 50, 78, 0.7);
   --text-color: #f5c9d9;      
   --primary-color: #e44489;  
-  --secondary-color: #b3a865; 
+  --secondary-color: #a39b64; 
   --trerciary-color: #5ce88c; 
 }
 
@@ -25,7 +25,6 @@ body {
   color: var(--text-color);
 }
 
-/* Conteneur global ou body */
 body::-webkit-scrollbar {
   width: 14px; 
 }
