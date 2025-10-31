@@ -114,7 +114,7 @@ import { professionalData } from '@/staticData/professionalData'
   content: '';
   position: absolute;
   top: 2.5rem;
-  left: -26px;
+  left: -28px;
   width: 16px;
   height: 16px;
   background-color: var(--secondary-color);

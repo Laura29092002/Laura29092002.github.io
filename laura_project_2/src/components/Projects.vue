@@ -23,12 +23,26 @@
         :modules="modules"
         class="mySwiper"
       >
-        <swiper-slide><img src="../assets/test.png" alt="icon" /></swiper-slide
-        ><swiper-slide><img src="../assets/rose.png" alt="icon" /></swiper-slide
-        ><swiper-slide><img src="../assets/onglet.png" alt="icon" /></swiper-slide
-        ><swiper-slide><img src="../assets/flore.png" alt="icon" /></swiper-slide
-        ><swiper-slide><img src="../assets/flore.png" alt="icon" /></swiper-slide>
-        <swiper-slide><img src="../assets/flore.png" alt="icon" /></swiper-slide>
+        <swiper-slide>
+          <img src="../assets/messagerie.png" alt="icon" />
+          <p>Application de messagerie instantanée</p>
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/sizzleandstudy.png" alt="icon" />
+          <p>Application de messagerie instantanée</p>
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/capteur.png" alt="icon" />
+          <p>Application de messagerie instantanée</p>
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/AR.png" alt="icon" />
+          <p>Application de messagerie instantanée</p>
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/ECAM.png" alt="icon" />
+          <p>Application de messagerie instantanée</p>
+        </swiper-slide>
       </swiper>
     </div>
   </div>
@@ -92,14 +106,17 @@ h2 {
 }
 
 .swiper-slide {
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;
   background-position: center;
   background-size: cover;
-  width: 300px;
+  width: 600px;
   height: 300px;
+  text-align: center;
 }
 
 .swiper-slide img {
-  display: block;
-  width: 100%;
+  width: 80%;
 }
 </style>
