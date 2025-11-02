@@ -17,7 +17,7 @@
           stretch: 0,
           depth: 100,
           modifier: 1,
-          slideShadows: true,
+          slideShadows: false,
         }"
         :pagination="pagination"
         :modules="modules"
@@ -25,6 +25,10 @@
       >
         <swiper-slide>
           <img src="../assets/messagerie.png" alt="icon" />
+          <p>Application de messagerie instantanée</p>
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/slf.png" alt="icon" />
           <p>Application de messagerie instantanée</p>
         </swiper-slide>
         <swiper-slide>
@@ -41,6 +45,10 @@
         </swiper-slide>
         <swiper-slide>
           <img src="../assets/ECAM.png" alt="icon" />
+          <p>Application de messagerie instantanée</p>
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/helico.png" alt="icon" />
           <p>Application de messagerie instantanée</p>
         </swiper-slide>
       </swiper>
