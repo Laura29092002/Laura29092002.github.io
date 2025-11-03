@@ -50,4 +50,11 @@ export const projectData : projectType[] = [
         description: "Conception et développement d'une application web complète pour la gestion et le suivi de projets, intégrant un dashboard interactif, une API REST, ainsi qu'une méthodologie de développement structurée axée sur la qualité du code et les bonnes pratiques agiles.",
         link: ""
     },
+    {
+        title: "",
+        image: "../src/assets/images/slf.png",
+        technologies: '',
+        description: "",
+        link: ""
+    },
 ]
