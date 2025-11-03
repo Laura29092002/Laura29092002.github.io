@@ -1,4 +1,25 @@
+<script setup>
+import { ref } from 'vue'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import 'swiper/css'
+import 'swiper/css/effect-coverflow'
+import 'swiper/css/pagination'
+import { projectData } from '@/staticData/projectData'
 
+import {Autoplay, EffectCoverflow, Pagination } from 'swiper/modules'
+import Modal from './Modal.vue'
+
+const pagination = { clickable: true }
+const modules = [Autoplay, EffectCoverflow, Pagination]
+
+const popupVisible = ref(false)
+const selectedSlide = ref({})
+
+function openPopup(slide) {
+  selectedSlide.value = slide
+  popupVisible.value = true
+}
+</script>
 
 <template>
   <div data-kinesisscroll-item data-ks-strength="-50" data-ks-transformaxis="Y">
@@ -25,65 +46,20 @@
         :modules="modules"
         class="mySwiper"
       >
-        <swiper-slide>
-          <img src="../assets/messagerie.png" alt="icon" />
-          <p>Application de messagerie instantanée</p>
-        </swiper-slide>
-        <swiper-slide>
-          <img src="../assets/slf.png" alt="icon" />
-          <p>Application de messagerie instantanée</p>
-        </swiper-slide>
-        <swiper-slide>
-          <img src="../assets/sizzleandstudy.png" alt="icon" />
-          <p>Application de messagerie instantanée</p>
-        </swiper-slide>
-        <swiper-slide>
-          <img src="../assets/capteur.png" alt="icon" />
-          <p>Application de messagerie instantanée</p>
-        </swiper-slide>
-        <swiper-slide>
-          <img src="../assets/AR.png" alt="icon" />
-          <p>Application de messagerie instantanée</p>
-        </swiper-slide>
-        <swiper-slide>
-          <img src="../assets/ECAM.png" alt="icon" />
-          <p>Application de messagerie instantanée</p>
-        </swiper-slide>
-        <swiper-slide>
-          <img src="../assets/helico.png" alt="icon" />
-          <p>Application de messagerie instantanée</p>
+      <swiper-slide
+          v-for="(slide, index) in projectData"
+          :key="index"
+          @click="openPopup(slide)"
+          class="clickable-slide"
+        >
+          <img :src="slide.image" :alt="slide.title" />
+          <p>{{ slide.title }}</p>
         </swiper-slide>
       </swiper>
+      <Modal v-model:popupVisible="popupVisible" :selectedSlide="selectedSlide" />
     </div>
   </div>
 </template>
-
-<script>
-import { Swiper, SwiperSlide } from 'swiper/vue'
-
-
-import 'swiper/css'
-
-import 'swiper/css/effect-coverflow'
-import 'swiper/css/pagination'
-
-import {Autoplay, EffectCoverflow, Pagination } from 'swiper/modules'
-
-export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
-  setup() {
-    return {
-      pagination: {
-        clickable: true,
-      },
-      modules: [Autoplay, EffectCoverflow, Pagination],
-    }
-  },
-}
-</script>
 
 <style>
 h2 {
@@ -95,7 +71,7 @@ h2 {
   font-size: 30px;
 }
 .background {
-  background-color: var(--secondary-color);
+  background: linear-gradient(var(--bg-color), var(--secondary-color));
   padding: 50px;
 }
 .swiper {
@@ -116,17 +92,24 @@ h2 {
 }
 
 .swiper-slide {
-  flex-direction: column; 
-  justify-content: center; 
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  text-align: center;
   background-position: center;
   background-size: cover;
   width: 600px;
   height: 300px;
-  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide:hover {
+  transform: scale(1.05);
 }
 
 .swiper-slide img {
   width: 80%;
+  border-radius: 10px;
 }
 </style>

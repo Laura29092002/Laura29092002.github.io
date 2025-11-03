@@ -8,9 +8,9 @@
   --trerciary-color: #45D272;
 }
 
-[data-theme="dark"] {
+[data-theme="light"] {
   --bg-color: #1b1216; 
-  --shadow: rgba(30, 50, 78, 0.7);
+  --shadow: rgba(255,255,255,0.4);
   --text-color: #f5c9d9;      
   --primary-color: #e44489;  
   --secondary-color: rgba(215, 159, 180, 0.6); 

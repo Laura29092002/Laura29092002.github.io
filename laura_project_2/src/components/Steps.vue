@@ -15,10 +15,10 @@ import { professionalData } from '@/staticData/professionalData'
     <div class="timeline-container" id="aboutMe">
       <h2 class="title">Parcours Scolaire</h2>
       <div class="flower-center-haut">
-      <img src="../assets/flore.png" alt="fleur centrale" />
+      <img src="../assets/images/flore.png" alt="fleur centrale" />
     </div>
     <div class="flower-center">
-      <img src="../assets/flore.png" alt="fleur centrale" />
+      <img src="../assets/images/flore.png" alt="fleur centrale" />
     </div>
       <div class="timeline-vertical">
         <div v-for="step in schoolData" :key="step.id">
@@ -28,17 +28,17 @@ import { professionalData } from '@/staticData/professionalData'
     </div>
 
     <div class="flower-center-haut-2">
-      <img src="../assets/flore.png" alt="fleur centrale" />
+      <img src="../assets/images/flore.png" alt="fleur centrale" />
     </div>
     <div class="flower-center-bas-2">
-      <img src="../assets/flore.png" alt="fleur centrale" />
+      <img src="../assets/images/flore.png" alt="fleur centrale" />
     </div>
     <div class="flower-center-bas">
-      <img src="../assets/flore.png" alt="fleur centrale" />
+      <img src="../assets/images/flore.png" alt="fleur centrale" />
     </div>
 
     <div class="flower-bas">
-      <img src="../assets/flore.png" alt="fleur centrale" />
+      <img src="../assets/images/flore.png" alt="fleur centrale" />
     </div>
 
     <!-- Parcours Professionnel -->

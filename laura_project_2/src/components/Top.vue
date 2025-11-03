@@ -6,41 +6,41 @@ initializeKinesis()
 <template>
   <div data-kinesistransformer>
     <div class="flower-right-haut">
-      <img src="../assets/flore.png" alt="fleur right haut" />
+      <img src="../assets/images/flore.png" alt="fleur right haut" />
     </div>
     <div class="flower-center">
-      <img src="../assets/flore.png" alt="fleur centrale" />
+      <img src="../assets/images/flore.png" alt="fleur centrale" />
     </div>
     <div class="flower-left">
-      <img src="../assets/flore.png" alt="fleur left" />
+      <img src="../assets/images/flore.png" alt="fleur left" />
     </div>
     <div class="flower-left-bas">
-      <img src="../assets/flore.png" alt="fleur right bas" />
+      <img src="../assets/images/flore.png" alt="fleur right bas" />
     </div>
     <div class="flower-right">
-      <img src="../assets/flore.png" alt="fleur right" />
+      <img src="../assets/images/flore.png" alt="fleur right" />
     </div>
     <div class="flower-right-bas">
-      <img src="../assets/flore.png" alt="fleur right bas" />
+      <img src="../assets/images/flore.png" alt="fleur right bas" />
     </div>
     <div class="flower-center-bas">
-      <img src="../assets/flore.png" alt="fleur centrale" />
+      <img src="../assets/images/flore.png" alt="fleur centrale" />
     </div>
     <div id="top" class="top">
       <div data-kinesistransformer-element data-ks-transform="translate" data-ks-strength="15">
         <div style="margin-right: 600px;">
-          <img src="../assets/flore.png" alt="icon" />
+          <img src="../assets/images/flore.png" alt="icon" />
         </div>
       </div>
       <div data-kinesistransformer-element data-ks-transform="translate" data-ks-strength="23">
         <div style="margin-left: 600px;">
-          <img src="../assets/flore.png" alt="icon" />
+          <img src="../assets/images/flore.png" alt="icon" />
         </div>
       </div>
 
       <div data-kinesistransformer-element data-ks-transform="translate" data-ks-strength="23">
         <div style="margin-right: 1000px;">
-          <img src="../assets/flore.png" alt="icon" />
+          <img src="../assets/images/flore.png" alt="icon" />
         </div>
       </div>
       <div data-kinesistransformer-element data-ks-transform="translate">
@@ -49,17 +49,17 @@ initializeKinesis()
       </div>
       <div data-kinesistransformer-element data-ks-transform="translate" data-ks-strength="23">
         <div style="margin-left: 1000px;">
-          <img src="../assets/flore.png" alt="icon" />
+          <img src="../assets/images/flore.png" alt="icon" />
         </div>
       </div>
       <div data-kinesistransformer-element data-ks-transform="translate" data-ks-strength="-15">
         <div style="margin-right: 600px;">
-          <img src="../assets/flore.png" alt="icon" />
+          <img src="../assets/images/flore.png" alt="icon" />
         </div>
       </div>
       <div data-kinesistransformer-element data-ks-transform="translate" data-ks-strength="-25">
         <div style="margin-left: 600px;">
-          <img src="../assets/flore.png" alt="icon" />
+          <img src="../assets/images/flore.png" alt="icon" />
         </div>
       </div>
     </div>
