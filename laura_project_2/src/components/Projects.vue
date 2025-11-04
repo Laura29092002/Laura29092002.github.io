@@ -109,7 +109,7 @@ h2 {
 }
 
 .swiper-slide img {
-  width: 80%;
+  width: 70%;
   border-radius: 10px;
 }
 </style>

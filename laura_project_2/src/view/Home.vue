@@ -18,10 +18,10 @@ import Steps from '@/components/Steps.vue'
     <Top />
   </header>
   <Steps/>
-  <h2>Mes diplômes</h2>
+  <h2>Mes certificats</h2>
   <div class="diplome">
-  <img src="../assets/images/diplome-ux-ui.jpg"></img>
-  <img src="../assets/images/diplome-po.jpg"></img>
+    <a href="https://app.procertif.com/wallet/65770394d0187"><img class="img-diplome" src="../assets/images/diplome-ux-ui.jpg"></img></a>
+    <a href="https://app.procertif.com/wallet/657439004aec6/2311laumus841"><img class="img-diplome" src="../assets/images/diplome-po.jpg"></img></a>
   </div>
   <Projects />
   <footer>
@@ -30,7 +30,7 @@ import Steps from '@/components/Steps.vue'
   </footer>
 </template>
 
-<style>
+<style scoped>
 
 header {
   top: 0;
@@ -59,12 +59,17 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 70px;
 }
 
-img{
-  width: 20%;
+.img-diplome{
+  width: 300px;
   border-radius: 10px;
-  margin: 30px;
+  transition: transform 0.3s ease;
+}
+
+.img-diplome:hover {
+  transform: scale(1.1); /* agrandissement au survol */
 }
 
 .separator {
