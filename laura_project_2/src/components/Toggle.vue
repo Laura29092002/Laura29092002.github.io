@@ -35,6 +35,7 @@ const toggleTheme = () => {
   display: flex;
   justify-content: flex-end;
   padding: 20px; 
+  margin-left: 70px;
 }
 
 .switch {

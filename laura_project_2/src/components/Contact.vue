@@ -1,28 +1,68 @@
-<script>
-import 'floating-vue/dist/style.css'
+<script setup>
+import { ref } from 'vue'
+
+const email = 'mussardlaura299@gmail.com'
+const visible = ref(false)
+const copied = ref(false)
+const input = ref(null)
+let hideTimer = null
+
+function show() {
+  visible.value = true
+  copied.value = false
+  clearTimeout(hideTimer)
+}
+
+function keep() {
+  clearTimeout(hideTimer)
+}
+
+function hide() {
+  // petit délai pour permettre clic sur le bouton
+  hideTimer = setTimeout(() => (visible.value = false), 200)
+}
+
+function selectInput() {
+  // sélectionne le texte dans l'input
+  input.value && input.value.select()
+}
+
+async function copy() {
+  try {
+    await navigator.clipboard.writeText(email)
+    copied.value = true
+    // garde le message quelques secondes
+    setTimeout(() => (copied.value = false), 2000)
+  } catch (e) {
+    // fallback : sélectionner pour que l'utilisateur puisse Ctrl+C
+    selectInput()
+    alert('Impossible d’utiliser le presse-papier : sélectionnez et copiez manuellement.')
+  }
+}
 </script>
 
 <template>
   <h4>Contact</h4>
   <div id="contact">
-    <div v-tooltip="'mussardlaura299@gmail.com'">
-      <a href="mailto:mussardlaura299@gmail.com"
-        ><svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-mail-icon lucide-mail"
-        >
-          <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
-          <rect x="2" y="4" width="20" height="16" rx="2" /></svg
-      ></a>
+    <div class="tooltip-wrapper" @mouseleave="hide">
+    <a :href="`mailto:${email}`" class="icon-link" @mouseenter="show" @focus="show">
+      <!-- ton SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+           fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+           class="lucide lucide-mail-icon lucide-mail">
+        <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+        <rect x="2" y="4" width="20" height="16" rx="2" />
+      </svg>
+    </a>
+
+    <div v-if="visible" class="tooltip" role="tooltip" @mouseenter="keep" @mouseleave="hide">
+      <label class="sr-only" for="email-field">Adresse e-mail</label>
+      <input id="email-field" ref="input" :value="email" readonly @focus="selectInput" />
+      <button @click="copy" :aria-label="copied ? 'Copié' : 'Copier l’adresse'">
+        {{ copied ? 'Copié ✓' : 'Copier' }}
+      </button>
     </div>
+  </div>
     <div>
       <a href="https://www.linkedin.com/in/laura-mussard-3576a6255/"
         ><svg
@@ -69,6 +109,42 @@ import 'floating-vue/dist/style.css'
 </template>
 
 <style scoped>
+  .tooltip-wrapper { position: relative; display: inline-block; }
+.icon-link { display:inline-flex; align-items:center; text-decoration:none;}
+.tooltip {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(100% + 8px);
+  background: var(--primary-color);
+  color: #fff;
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  user-select: text; /* permet la sélection */
+  z-index: 50;
+}
+.tooltip input {
+  border: none;
+  background: transparent;
+  color: inherit;
+  outline: none;
+  font-size: 14px;
+  width: max-content;
+  min-width: 180px;
+}
+.tooltip button {
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  border: none;
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.sr-only { position: absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
 h4 {
   text-align: center;
   color:var(--primary-color);

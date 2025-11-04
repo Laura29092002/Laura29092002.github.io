@@ -9,11 +9,20 @@ import Steps from '@/components/Steps.vue'
 
 <template>
   <header>
-    <Toggle/>
-    <NaviagationBar />
+    <div class="header-top">
+      <div class="nav-center">
+        <NaviagationBar />
+      </div>
+      <Toggle />
+    </div>
     <Top />
   </header>
   <Steps/>
+  <h2>Mes diplômes</h2>
+  <div class="diplome">
+  <img src="../assets/images/diplome-ux-ui.jpg"></img>
+  <img src="../assets/images/diplome-po.jpg"></img>
+  </div>
   <Projects />
   <footer>
     <hr class="separator" />
@@ -27,8 +36,35 @@ header {
   top: 0;
   width: 100%;
 }
+
+.header-top {
+  display: flex;
+  justify-content: space-between; 
+}
+
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+header .app-container {
+  margin-left: auto;
+}
+
 footer {
   bottom: 0;
+}
+
+.diplome{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img{
+  width: 20%;
+  border-radius: 10px;
+  margin: 30px;
 }
 
 .separator {

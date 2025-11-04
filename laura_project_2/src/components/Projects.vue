@@ -71,7 +71,7 @@ h2 {
   font-size: 30px;
 }
 .background {
-  background: linear-gradient(var(--bg-color), var(--secondary-color));
+  background: linear-gradient(var(--bg-color), var(--secondary-color), var(--bg-color));
   padding: 50px;
 }
 .swiper {
@@ -84,7 +84,7 @@ h2 {
   width: 10px;
   height: 10px;
   opacity: 1;
-  background: rgba(0, 0, 0, 0.2);
+  background: var(--shadow);
 }
 
 .swiper-pagination-bullet-active {

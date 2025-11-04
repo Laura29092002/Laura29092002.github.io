@@ -3,5 +3,4 @@ export interface schoolStep {
   period: String
   description: String
   place: String
-  direction?: 'left' | 'right'
 }

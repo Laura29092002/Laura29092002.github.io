@@ -7,7 +7,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="timeline-content" :class="props.step.direction">
+  <div class="timeline-content">
     <h3>{{ props.step.title }}</h3>
     <p class="date">{{ props.step.period }}</p>
     <p class="place">{{ props.step.place }}</p>

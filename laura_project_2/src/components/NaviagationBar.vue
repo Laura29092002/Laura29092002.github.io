@@ -1,4 +1,5 @@
 <script>
+import Toggle from '@/components/Toggle.vue'
 const indicator = document.querySelector('.nav-indicator')
 const items = document.querySelectorAll('.nav-item')
 
@@ -64,6 +65,7 @@ items.forEach((item, index) => {
 }
 
 nav {
+  white-space: nowrap; 
   margin-top: 10px;
   display: flex;
   overflow: hidden;

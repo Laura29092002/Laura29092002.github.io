@@ -21,7 +21,8 @@ import { professionalData } from '@/staticData/professionalData'
       <img src="../assets/images/flore.png" alt="fleur centrale" />
     </div>
       <div class="timeline-vertical">
-        <div v-for="step in schoolData" :key="step.id">
+        <div v-for="(step, index) in schoolData"
+          :key="index">
           <School :step="step" />
         </div>
       </div>
@@ -45,7 +46,8 @@ import { professionalData } from '@/staticData/professionalData'
     <div class="timeline-container">
       <h2 class="title">Parcours Professionnel</h2>
       <div class="timeline-vertical">
-        <div v-for="step in professionalData" :key="step.id">
+        <div v-for="(step, index) in professionalData"
+          :key="index">
           <School :step="step" />
         </div>
       </div>

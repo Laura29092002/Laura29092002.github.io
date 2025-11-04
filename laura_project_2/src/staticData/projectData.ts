@@ -51,9 +51,9 @@ export const projectData : projectType[] = [
         link: ""
     },
     {
-        title: "",
+        title: "Site d'e-commerce",
         image: "../src/assets/images/slf.png",
-        technologies: '',
+        technologies: 'HTML/ CSS/ PHP',
         description: "",
         link: ""
     },
