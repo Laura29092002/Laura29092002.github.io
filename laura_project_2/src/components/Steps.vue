@@ -58,10 +58,7 @@ import { professionalData } from '@/staticData/professionalData'
 <style scoped>
 /* --- TITRE --- */
 .title {
-  color: var(--primary-color);
-  font-family: 'Caprasimo', serif;
   text-align: center;
-  font-size: 30px;
   margin-bottom: 1rem;
 }
 
@@ -70,16 +67,13 @@ import { professionalData } from '@/staticData/professionalData'
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 4rem;
+  gap: 8rem;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   flex-wrap: wrap;
 }
 
 /* --- CHAQUE TIMELINE --- */
 .timeline-container {
-  flex: 1;
   position: relative;
 }
 
@@ -88,7 +82,6 @@ import { professionalData } from '@/staticData/professionalData'
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   padding-left: 2rem;
 }
 

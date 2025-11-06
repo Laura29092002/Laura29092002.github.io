@@ -104,8 +104,15 @@ h2 {
   transition: transform 0.3s ease;
 }
 
+@media (max-width: 630px) {
+  .swiper-slide{
+    width: 350px;
+    height: 200px;
+  }
+}
+
 .swiper-slide:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .swiper-slide img {

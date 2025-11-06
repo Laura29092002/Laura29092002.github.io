@@ -29,67 +29,56 @@ initializeKinesis()
     <div id="top" class="top">
       <div data-kinesistransformer-element data-ks-transform="translate" data-ks-strength="15">
         <div style="margin-right: 600px;">
-          <img src="../assets/images/flore.png" alt="icon" />
+          <img class="fleur" src="../assets/images/flore.png" alt="icon" />
         </div>
       </div>
       <div data-kinesistransformer-element data-ks-transform="translate" data-ks-strength="23">
         <div style="margin-left: 600px;">
-          <img src="../assets/images/flore.png" alt="icon" />
+          <img class="fleur" src="../assets/images/flore.png" alt="icon" />
         </div>
       </div>
 
       <div data-kinesistransformer-element data-ks-transform="translate" data-ks-strength="23">
         <div style="margin-right: 1000px;">
-          <img src="../assets/images/flore.png" alt="icon" />
+          <img class="fleur" src="../assets/images/flore.png" alt="icon" />
         </div>
       </div>
       <div data-kinesistransformer-element data-ks-transform="translate">
         <h1>LAURA MUSSARD</h1>
-        <h2>Développeuse Full-Stack</h2>
+        <h2 class="job">Développeuse Full-Stack</h2>
       </div>
       <div data-kinesistransformer-element data-ks-transform="translate" data-ks-strength="23">
         <div style="margin-left: 1000px;">
-          <img src="../assets/images/flore.png" alt="icon" />
+          <img class="fleur" src="../assets/images/flore.png" alt="icon" />
         </div>
       </div>
       <div data-kinesistransformer-element data-ks-transform="translate" data-ks-strength="-15">
         <div style="margin-right: 600px;">
-          <img src="../assets/images/flore.png" alt="icon" />
+          <img class="fleur" src="../assets/images/flore.png" alt="icon" />
         </div>
       </div>
       <div data-kinesistransformer-element data-ks-transform="translate" data-ks-strength="-25">
         <div style="margin-left: 600px;">
-          <img src="../assets/images/flore.png" alt="icon" />
+          <img class="fleur" src="../assets/images/flore.png" alt="icon" />
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<style scoped>
+<style>
 .top {
   text-align: center;
   padding-bottom: 60px;
   align-items: center;
 }
 
-h1 {
-  font-size: 50px;
-  font-family: 'Caprasimo', serif;
-  font-weight: 400;
-  font-style: normal;
-  color: var(--primary-color);
-  text-shadow: 2px 2px 5px var(--shadow);
-}
-h2 {
-  font-size: 35px;
-  font-family: 'Caprasimo', serif;
-  font-weight: 400;
-  font-style: normal;
+.job{
+  
   text-shadow: 2px 2px 5px var(--shadow);
 }
 
-img {
+.fleur {
   width: 100px;
   height: 100px;
   filter: drop-shadow(2px 2px 5px var(--shadow));
@@ -100,13 +89,13 @@ img {
   top: 50%;        
   left: 50%;       
   transform: translate(-50%, -50%);
-  z-index: 0;      
+  z-index: -10;      
 }
 
 .flower-center img {
   width: 300px;   
   height: 300px;
-  opacity: 0.3;   
+  opacity: 0.3; 
 }
 .flower-left {
   position: absolute;

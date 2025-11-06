@@ -18,7 +18,7 @@ import Steps from '@/components/Steps.vue'
     <Top />
   </header>
   <Steps/>
-  <h2>Mes certificats</h2>
+  <h2>Mes certifications</h2>
   <div class="diplome">
     <a href="https://app.procertif.com/wallet/65770394d0187"><img class="img-diplome" src="../assets/images/diplome-ux-ui.jpg"></img></a>
     <a href="https://app.procertif.com/wallet/657439004aec6/2311laumus841"><img class="img-diplome" src="../assets/images/diplome-po.jpg"></img></a>
@@ -31,6 +31,8 @@ import Steps from '@/components/Steps.vue'
 </template>
 
 <style scoped>
+
+
 
 header {
   top: 0;
@@ -58,8 +60,12 @@ footer {
 .diplome{
   display: flex;
   justify-content: center;
+  position: relative;
+  flex-wrap: wrap;
+  z-index: 99;
   align-items: center;
   gap: 70px;
+  margin-bottom: 50px;
 }
 
 .img-diplome{

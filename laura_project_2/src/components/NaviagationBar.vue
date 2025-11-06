@@ -1,5 +1,4 @@
 <script>
-import Toggle from '@/components/Toggle.vue'
 const indicator = document.querySelector('.nav-indicator')
 const items = document.querySelectorAll('.nav-item')
 

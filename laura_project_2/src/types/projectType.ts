@@ -3,5 +3,6 @@ export interface projectType {
     image : String,
     technologies: String,
     description : String,
-    link : String
+    link : String,
+    video: String
 }

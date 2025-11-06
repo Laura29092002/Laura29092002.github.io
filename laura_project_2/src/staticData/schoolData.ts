@@ -5,7 +5,7 @@ export const schoolData: schoolStep[] = [
     title: "Échange Erasmus Belgique",
     period: 'Septembre 2024 - Janvier 2025',
     description:
-      'Développement frontend (HTML CSS, React et Vue);Développement backend (Python, Java, PHP);Bases de données (SQL et NoSQL);Méthodologies agiles (Scrum, Kanban)',
+      'Bases de données (SQL et NoSQL); Développement mobile (Kotlin); Développement 3D (Rust)',
     place: 'ECAM - Bruxelles (Belgique)',
   },
   {
