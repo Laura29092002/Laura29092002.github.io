@@ -47,8 +47,6 @@ const toggleTheme = () => {
 }
 
 
-
-
 .switch input {
   opacity: 0;
   width: 0;

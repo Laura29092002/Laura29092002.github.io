@@ -5,24 +5,27 @@ import NaviagationBar from '@/components/NaviagationBar.vue'
 import Projects from '@/components/Projects.vue'
 import Toggle from '@/components/Toggle.vue'
 import Steps from '@/components/Steps.vue'
+import Certification from '@/components/Certification.vue'
+const scrollToSection = (id : String) => {
+  const el = document.getElementById(id)
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth' })
+  }
+}
 </script>
 
 <template>
   <header>
     <div class="header-top">
       <div class="nav-center">
-        <NaviagationBar />
+        <NaviagationBar @goToSection="scrollToSection" />
       </div>
       <Toggle />
     </div>
     <Top />
   </header>
   <Steps/>
-  <h2>Mes certifications</h2>
-  <div class="diplome">
-    <a href="https://app.procertif.com/wallet/65770394d0187"><img class="img-diplome" src="../assets/images/diplome-ux-ui.jpg"></img></a>
-    <a href="https://app.procertif.com/wallet/657439004aec6/2311laumus841"><img class="img-diplome" src="../assets/images/diplome-po.jpg"></img></a>
-  </div>
+  <Certification/>
   <Projects />
   <footer>
     <hr class="separator" />
@@ -31,7 +34,6 @@ import Steps from '@/components/Steps.vue'
 </template>
 
 <style scoped>
-
 
 
 header {
@@ -57,26 +59,6 @@ footer {
   bottom: 0;
 }
 
-.diplome{
-  display: flex;
-  justify-content: center;
-  position: relative;
-  flex-wrap: wrap;
-  z-index: 99;
-  align-items: center;
-  gap: 70px;
-  margin-bottom: 50px;
-}
-
-.img-diplome{
-  width: 300px;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.img-diplome:hover {
-  transform: scale(1.1); /* agrandissement au survol */
-}
 
 .separator {
   border: none;

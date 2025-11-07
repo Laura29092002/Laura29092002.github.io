@@ -62,14 +62,7 @@ function openPopup(slide) {
 </template>
 
 <style>
-h2 {
-  color: var(--primary-color);
-  text-align: center;
-  font-family: 'Caprasimo', serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 30px;
-}
+
 .background {
   background: linear-gradient(var(--bg-color), var(--secondary-color), var(--bg-color));
   padding: 50px;

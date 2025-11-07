@@ -24,9 +24,6 @@ p {
   text-wrap: wrap;
 }
 
-h3 {
-  font-size: 22px;
-}
 .timeline-content {
   position: relative;
   padding: 1rem;

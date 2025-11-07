@@ -28,7 +28,7 @@ items.forEach((item, index) => {
 </script>
 <template>
   <nav>
-    <a href="#top" class="nav-item is-active" data-target="Home">
+    <a @click="$emit('goToSection', 'top')" class="nav-item is-active" data-target="Home">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -50,9 +50,9 @@ items.forEach((item, index) => {
       </svg>
       ACCUEIL
     </a>
-    <a href="#aboutMe" class="nav-item" data-target="About me">A PROPOS</a>
-    <a href="#projects" class="nav-item" data-target="My projects">MES PROJETS</a>
-    <a href="#contact" class="nav-item" data-target="Contact">CONTACT</a>
+    <a @click="$emit('goToSection', 'aboutMe')" class="nav-item" data-target="About me">A PROPOS</a>
+    <a @click="$emit('goToSection', 'projects')"  class="nav-item" data-target="My projects">MES PROJETS</a>
+    <a @click="$emit('goToSection', 'contact')" class="nav-item" data-target="Contact">CONTACT</a>
     <span class="nav-indicator"></span>
   </nav>
 </template>
@@ -82,6 +82,7 @@ nav {
   padding: 20px;
   margin: 0 40px;
   position: relative;
+  cursor: pointer;
 }
 
 .nav-item:before {

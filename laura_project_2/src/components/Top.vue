@@ -1,6 +1,11 @@
-<script>
+<script setup>
 import { initializeKinesis } from '@amineyarman/kinesis'
 initializeKinesis()
+
+import { ref, watchEffect } from 'vue';
+
+const theme = ref(localStorage.getItem('theme') || 'light');
+
 </script>
 
 <template>
@@ -67,6 +72,8 @@ initializeKinesis()
 </template>
 
 <style>
+
+
 .top {
   text-align: center;
   padding-bottom: 60px;

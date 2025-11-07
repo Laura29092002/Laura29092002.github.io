@@ -6,15 +6,17 @@
   --primary-color: #9d2c68;
   --secondary-color: rgb(245, 201, 217, 0.8);
   --trerciary-color: #45D272;
+  --flower-image: url('../assets/images/flore.png');
 }
 
-[data-theme="light"] {
+[data-theme="dark"] {
   --bg-color: #1b1216; 
   --shadow: rgba(255,255,255,0.4);
   --text-color: #f5c9d9;      
   --primary-color: #e44489;  
   --secondary-color: rgba(215, 159, 180, 0.6); 
-  --trerciary-color: #5ce88c; 
+  --trerciary-color: #5ce88c;
+  --flower-image: url('../assets/images/flore-dark.png');
 }
 
 
@@ -52,10 +54,17 @@ h1 {
   text-shadow: 2px 2px 5px var(--shadow);
 }
 h2 {
-  font-size: 30px;
+  color: var(--primary-color);
+  text-align: center;
   font-family: 'Caprasimo', serif;
   font-weight: 400;
   font-style: normal;
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+  color: var(--primary-color);
 }
 
 @media (max-width: 768px) {

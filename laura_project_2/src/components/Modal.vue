@@ -7,7 +7,6 @@ const props = defineProps({
 
 const emit = defineEmits(['update:popupVisible'])
 
-// ferme la popup en émettant l'update du v-model
 function close() {
   emit('update:popupVisible', false)
 }
@@ -19,15 +18,16 @@ function close() {
         <div class="popup-body">
           <video v-if="selectedSlide.video" :key="selectedSlide.video" controls autoplay muted>
             <source :src="selectedSlide.video" type="video/mp4">
-        </video>
-          
-        <img v-else :src="selectedSlide.image" :alt="selectedSlide.title" />
+          </video>
+          <img v-else :src="selectedSlide.image" :alt="selectedSlide.title" />
+
         <div class="popup-text">
             <h3>{{ selectedSlide.title }}</h3>
             <a :href="selectedSlide.link" target="_blank" v-if="selectedSlide.link">Lien github</a>
             <p class="technologies"><strong class="strong">Technologies :</strong> {{ selectedSlide.technologies }}</p>
             <p><strong class="strong">Description :</strong> {{ selectedSlide.description }}</p>
         </div>
+
         <button @click="close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
         </div>
       </div>
@@ -82,10 +82,6 @@ function close() {
   max-width: 100%;
 }
 
-h3 {
-  font-size: 25px;
-  color: var(--primary-color);
-}
 
 a {
   color: var(--text-color);
