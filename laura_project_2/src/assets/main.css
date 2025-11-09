@@ -1,0 +1,86 @@
+
+:root {
+  --bg-color: #fffcfc;
+  --shadow: rgba(30, 50, 78, 0.5);
+  --text-color: #a86e8c;
+  --primary-color: #9d2c68;
+  --secondary-color: rgb(245, 201, 217, 0.8);
+  --trerciary-color: #45D272;
+  --flower-image: url('../assets/images/flore.png');
+}
+
+[data-theme="light"] {
+  --bg-color: #1b1216; 
+  --shadow: rgba(255,255,255,0.4);
+  --text-color: #f5c9d9;      
+  --primary-color: #e44489;  
+  --secondary-color: rgba(215, 159, 180, 0.6); 
+  --trerciary-color: #5ce88c;
+  --flower-image: url('../assets/images/flore-dark.png');
+}
+
+
+body {
+  overflow-x: hidden;
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body::-webkit-scrollbar {
+  width: 14px; 
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 30px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color); 
+  border-radius: 30px;
+  border: 3px solid var(--text-color);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--secondary-color); 
+}
+
+h1 {
+  font-size: 50px;
+  font-family: 'Caprasimo', serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--primary-color);
+  text-shadow: 2px 2px 5px var(--shadow);
+}
+h2 {
+  color: var(--primary-color);
+  text-align: center;
+  font-family: 'Caprasimo', serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  h1{
+    font-size: 40px;
+  }
+  h2{
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 370px) {
+  h1{
+    font-size: 35px;
+  }
+  h2{
+    font-size: 20px;
+  }
+}
