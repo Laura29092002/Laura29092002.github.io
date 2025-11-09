@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 
 const props = defineProps({
   popupVisible: { type: Boolean, default: false },

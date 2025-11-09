@@ -3,9 +3,9 @@ import Top from '@/components/Top.vue'
 import Contact from '@/components/Contact.vue'
 import NaviagationBar from '@/components/NaviagationBar.vue'
 import Projects from '@/components/Projects.vue'
-import Toggle from '@/components/Toggle.vue'
 import Steps from '@/components/Steps.vue'
 import Certification from '@/components/Certification.vue'
+import Toggle from '@/components/Toggle.vue'
 const scrollToSection = (id : String) => {
   const el = document.getElementById(id)
   if (el) {

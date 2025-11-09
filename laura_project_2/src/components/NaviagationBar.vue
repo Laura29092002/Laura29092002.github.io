@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 const indicator = document.querySelector('.nav-indicator')
 const items = document.querySelectorAll('.nav-item')
 
@@ -11,9 +11,12 @@ function handleIndicator(el) {
   const elementColor = 'pink'
   const target = el.dataset.target
 
-  indicator.style.width = `${el.offsetWidth}px`
-  indicator.style.backgroundColor = elementColor
-  indicator.style.left = `${el.offsetLeft}px`
+  if(indicator && indicator){
+    indicator.style.width = `${el.offsetWidth}px`
+    indicator.style.backgroundColor = elementColor
+    indicator.style.left = `${el.offsetLeft}px`
+  }
+  
 
   el.classList.add('is-active')
   el.style.color = elementColor
