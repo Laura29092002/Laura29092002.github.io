@@ -1,6 +1,6 @@
-import type { schoolStep } from '@/types/stepType'
+import type { stepType } from '@/types/stepType'
 
-export const schoolData: schoolStep[] = [
+export const schoolData: stepType[] = [
   {
     title: "Échange Erasmus Belgique",
     period: 'Septembre 2024 - Janvier 2025',

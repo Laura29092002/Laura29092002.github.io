@@ -1,4 +1,4 @@
-export interface schoolStep {
+export interface stepType {
   title: String
   period: String
   description: String

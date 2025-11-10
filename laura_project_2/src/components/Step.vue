@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { schoolStep } from '@/types/stepType'
+import type { stepType } from '@/types/stepType'
 
 const props = defineProps<{
-  step: schoolStep
+  step: stepType
 }>()
 </script>
 

@@ -8,6 +8,7 @@ import { projectData } from '@/staticData/projectData'
 
 import {Autoplay, EffectCoverflow, Pagination } from 'swiper/modules'
 import Modal from './Modal.vue'
+import type { projectType } from '@/types/projectType'
 
 const pagination = { clickable: true }
 const modules = [Autoplay, EffectCoverflow, Pagination]
@@ -15,7 +16,7 @@ const modules = [Autoplay, EffectCoverflow, Pagination]
 const popupVisible = ref(false)
 const selectedSlide = ref({})
 
-function openPopup(slide) {
+function openPopup(slide: projectType) {
   selectedSlide.value = slide
   popupVisible.value = true
 }

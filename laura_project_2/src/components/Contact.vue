@@ -4,17 +4,18 @@ import { ref } from 'vue'
 const email = 'mussardlaura299@gmail.com'
 const visible = ref(false)
 const copied = ref(false)
-const input = ref(null)
-let hideTimer = null
+const input = ref<HTMLInputElement | null>(null)
+let hideTimer: ReturnType<typeof setTimeout> | null = null
+
 
 function show() {
   visible.value = true
   copied.value = false
-  clearTimeout(hideTimer)
+  clearTimeout(hideTimer!)
 }
 
 function keep() {
-  clearTimeout(hideTimer)
+  clearTimeout(hideTimer!)
 }
 
 function hide() {

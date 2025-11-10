@@ -1,6 +1,6 @@
 export interface projectType {
-    title : String,
-    image : String,
+    title : string,
+    image : string,
     technologies: String,
     description : String,
     link : String,

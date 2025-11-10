@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import Top from '@/components/Top.vue'
 import Contact from '@/components/Contact.vue'
-import NaviagationBar from '@/components/NaviagationBar.vue'
 import Projects from '@/components/Projects.vue'
 import Steps from '@/components/Steps.vue'
 import Certification from '@/components/Certification.vue'
 import Toggle from '@/components/Toggle.vue'
-const scrollToSection = (id : String) => {
+import NavigationBar from '@/components/NavigationBar.vue'
+const scrollToSection = (id : string) => {
   const el = document.getElementById(id)
   if (el) {
     el.scrollIntoView({ behavior: 'smooth' })
@@ -18,7 +18,7 @@ const scrollToSection = (id : String) => {
   <header>
     <div class="header-top">
       <div class="nav-center">
-        <NaviagationBar @goToSection="scrollToSection" />
+        <NavigationBar @goToSection="scrollToSection" />
       </div>
       <Toggle />
     </div>

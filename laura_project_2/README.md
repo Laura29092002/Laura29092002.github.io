@@ -1,48 +1,105 @@
-# laura_project_2
+# 🌸 Laura's Portfolio (laura_project_2)
 
-This template should help get you started developing with Vue 3 in Vite.
+A personal portfolio built with **Vue.js**, showcasing my projects, skills, and professional journey.
 
-## Recommended IDE Setup
+[My portfolio](https://laura-mussard.com/)
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+---
 
-## Recommended Browser Setup
+## 🚀 Project Setup
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+Install dependencies:
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+Start the development server with hot-reload:
 
-```sh
+```bash
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+Build for production (type-check, compile, and minify):
 
-```sh
+```bash
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+---
 
-```sh
-npm run lint
-```
+## 🏗️ Project Architecture
+
+The project is structured into three main folders:
+
+* **components** – reusable UI components for each section
+* **types** – TypeScript types for projects and timelines
+* **views** – main pages of the application
+
+---
+
+### ✨ Components
+
+**Header**
+
+* **NavigationBar** – navigation links: Home, About, Projects, Contact
+* **Toggle** – switch to toggle the app theme
+* **Top** – animated header with flowers and title using [Kinesis.js](https://kinesisjs.com/)
+
+**Body**
+
+* **Steps** – displays two timelines: *Education* and *Professional Experience*
+* **Step** – individual timeline entry
+* **Certification** – displays earned certifications
+* **Projects** – project carousel implemented with [Swiper.js](https://swiperjs.com/get-started#use-swiper-from-cdn)
+* **Modal** – project details displayed in a modal when clicked
+
+**Footer**
+
+* **Contact** – contact section with links and form
+
+---
+
+### 📐 Types
+
+**Project Type**
+
+* `title`: string
+* `image`: string
+* `technologies`: string
+* `description`: string (use `;` to create a list)
+* `link`: string
+* `video`: string
+
+**Step Type**
+
+* `title`: string
+* `period`: string
+* `description`: string (use `;` to create a list)
+* `place`: string
+
+---
+
+### 🖥️ Views
+
+**Home** – the main page, containing all the components listed above.
+
+---
+
+### ⚡ Features
+
+* Fully responsive design
+* Dark/Light theme toggle
+* Smooth animations with Kinesis.js
+* Interactive project carousel with modals
+
+---
+
+### 📚 Tech Stack
+
+* **Vue.js 3**
+* **TypeScript**
+* **Swiper.js**
+* **Kinesis.js**
+
+

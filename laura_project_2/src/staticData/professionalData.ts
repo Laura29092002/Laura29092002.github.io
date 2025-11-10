@@ -1,6 +1,6 @@
-import type { schoolStep } from '@/types/stepType'
+import type { stepType } from '@/types/stepType'
 
-export const professionalData: schoolStep[] = [
+export const professionalData: stepType[] = [
   {
     title: 'Développeuse Full-Stack',
     period: '2025 -',

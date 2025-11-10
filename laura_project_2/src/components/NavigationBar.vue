@@ -1,8 +1,9 @@
-<script lang="ts">
-const indicator = document.querySelector('.nav-indicator')
-const items = document.querySelectorAll('.nav-item')
+<script setup lang="ts">
+const indicator = document.querySelector('.nav-indicator') as HTMLElement | null
+const items = document.querySelectorAll<HTMLElement>('.nav-item')
 
-function handleIndicator(el) {
+
+function handleIndicator(el: HTMLElement) {
   items.forEach((item) => {
     item.classList.remove('is-active')
     item.removeAttribute('style')
@@ -22,11 +23,14 @@ function handleIndicator(el) {
   el.style.color = elementColor
 }
 
-items.forEach((item, index) => {
+items.forEach((item) => {
   item.addEventListener('click', (e) => {
-    handleIndicator(e.target)
+    handleIndicator(e.currentTarget as HTMLElement)
   })
-  item.classList.contains('is-active') && handleIndicator(item)
+
+  if (item.classList.contains('is-active')) {
+    handleIndicator(item)
+  }
 })
 </script>
 <template>
