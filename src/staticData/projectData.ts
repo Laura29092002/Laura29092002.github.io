@@ -1,9 +1,19 @@
 import type { projectType } from '@/types/projectType'
+import imageAR from '@/assets/images/AR.png'
+import imageMessagerie from '@/assets/images/messagerie.png'
+import imageSizzleAndStudy from '@/assets/images/sizzleandstudy.png'
+import imageCapteur from '@/assets/images/capteur.png'
+import videoCapteur from '@/assets/videos/capteur.mp4'
+import imageHelico from '@/assets/images/helico.png'
+import videoHelico from '@/assets/videos/helico.mp4'
+import imageEcam from '@/assets/images/ECAM.png'
+import imageLicorne from '@/assets/images/licorne.png'
+import imageSLF from '@/assets/images/slf.png'
 
 export const projectData: projectType[] = [
   {
     title: 'Application de bureau - Messagerie instantanée',
-    image: '../src/assets/images/messagerie.png',
+    image: imageMessagerie,
     technologies: 'Java Swing / Web Sockets / AWS',
     description:
       "Développement d'une application de messagerie instantanée pour postes de travail, permettant aux utilisateurs de communiquer en temps réel dans un environnement sécurisé.",
@@ -12,7 +22,7 @@ export const projectData: projectType[] = [
   },
   {
     title: 'Application de recettes',
-    image: '../src/assets/images/sizzleandstudy.png',
+    image: imageSizzleAndStudy,
     technologies: 'PHP/ HTML/ CSS/ SQL',
     description:
       "Développement d'un site web interactif permettant aux utilisateurs de consulter, rechercher et gérer des recettes de cuisine, avec un espace personnel et un chatbot pour faciliter la découverte de recettes.",
@@ -21,15 +31,15 @@ export const projectData: projectType[] = [
   },
   {
     title: 'Dashboard de capteurs',
-    image: '../src/assets/images/capteur.png',
+    image: imageCapteur,
     technologies: 'ReactJS',
     description: "Développement d'un dashboard de gestion d'un parc informatique.",
     link: 'https://gitlab.com/tw-ece-paris/promo-2023/gr-02/prj-pei-tw-2023-01-moutoussamy-mussard',
-    video: '../src/assets/videos/capteur.mp4',
+    video: videoCapteur,
   },
   {
     title: 'Visualisation de plat en AR',
-    image: '../src/assets/images/AR.png',
+    image: imageAR,
     technologies: 'Unity / Blender',
     description:
       "En scannant un plat dans un menu de restaurant, l'application permet de voir le plat en 3D avec ses allergènes, sa composition et son poids en calories.",
@@ -38,15 +48,15 @@ export const projectData: projectType[] = [
   },
   {
     title: 'Hélicoptère en 3D',
-    image: '../src/assets/images/helico.png',
+    image: imageHelico,
     technologies: 'Fusion360',
     description: "Création d'un modèle d'hélicoptère en 3D.",
     link: '',
-    video: '../src/assets/videos/helico.mp4',
+    video: videoHelico,
   },
   {
     title: 'Application mobile portail étudiant',
-    image: '../src/assets/images/ECAM.png',
+    image: imageEcam,
     technologies: 'Kotlin Compose MultiPlatform',
     description:
       "Développement d'une application mobile destinée à servir de portail pour les étudiants, facilitant l'accès aux informations académiques, aux ressources pédagogiques et aux services administratifs.",
@@ -55,7 +65,7 @@ export const projectData: projectType[] = [
   },
   {
     title: 'Dashboard interactif pour la gestion de projets',
-    image: '../src/assets/images/licorne.png',
+    image: imageLicorne,
     technologies:
       'Angular / Java (Spring Boot) / JPA/Hibernate / PostgreSQL / ECharts / Maven / Karma / Jasmine / SonarQube',
     description:
@@ -65,7 +75,7 @@ export const projectData: projectType[] = [
   },
   {
     title: "Site d'e-commerce",
-    image: '../src/assets/images/slf.png',
+    image: imageSLF,
     technologies: 'HTML/ CSS/ PHP',
     description: '',
     link: '',
