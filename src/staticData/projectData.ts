@@ -12,6 +12,14 @@ import imageSLF from '@/assets/images/slf.png'
 
 export const projectData: projectType[] = [
   {
+    title: "Site d'e-commerce",
+    image: imageSLF,
+    technologies: 'HTML/ CSS/ PHP',
+    description: "Concevoir et développer un site web e-commerce spécialisé dans la vente de vêtements. L’objectif principal est de créer une plateforme intuitive et moderne permettant à la fois aux vendeurs de proposer leurs produits et aux clients d’effectuer leurs achats facilement.",
+    link: 'https://github.com/Laura29092002/SLF',
+    video: '',
+  },
+  {
     title: 'Application de bureau - Messagerie instantanée',
     image: imageMessagerie,
     technologies: 'Java Swing / Web Sockets / AWS',
@@ -70,14 +78,6 @@ export const projectData: projectType[] = [
       'Angular / Java (Spring Boot) / JPA/Hibernate / PostgreSQL / ECharts / Maven / Karma / Jasmine / SonarQube',
     description:
       "Conception et développement d'une application web complète pour la gestion et le suivi de projets, intégrant un dashboard interactif, une API REST, ainsi qu'une méthodologie de développement structurée axée sur la qualité du code et les bonnes pratiques agiles.",
-    link: '',
-    video: '',
-  },
-  {
-    title: "Site d'e-commerce",
-    image: imageSLF,
-    technologies: 'HTML/ CSS/ PHP',
-    description: '',
     link: '',
     video: '',
   },
