@@ -2,10 +2,9 @@
 import { initializeKinesis } from '@amineyarman/kinesis'
 initializeKinesis()
 
-import { ref, watchEffect } from 'vue';
+import { ref, watchEffect } from 'vue'
 
-const theme = ref(localStorage.getItem('theme') || 'light');
-
+const theme = ref(localStorage.getItem('theme') || 'light')
 </script>
 
 <template>
@@ -33,18 +32,18 @@ const theme = ref(localStorage.getItem('theme') || 'light');
     </div>
     <div id="top" class="top">
       <div data-kinesistransformer-element data-ks-transform="translate" data-ks-strength="15">
-        <div style="margin-right: 600px;">
+        <div style="margin-right: 600px">
           <img class="fleur" src="../assets/images/flore.png" alt="icon" />
         </div>
       </div>
       <div data-kinesistransformer-element data-ks-transform="translate" data-ks-strength="23">
-        <div style="margin-left: 600px;">
+        <div style="margin-left: 600px">
           <img class="fleur" src="../assets/images/flore.png" alt="icon" />
         </div>
       </div>
 
       <div data-kinesistransformer-element data-ks-transform="translate" data-ks-strength="23">
-        <div style="margin-right: 1000px;">
+        <div style="margin-right: 1000px">
           <img class="fleur" src="../assets/images/flore.png" alt="icon" />
         </div>
       </div>
@@ -53,17 +52,17 @@ const theme = ref(localStorage.getItem('theme') || 'light');
         <h2 class="job">Développeuse Full-Stack</h2>
       </div>
       <div data-kinesistransformer-element data-ks-transform="translate" data-ks-strength="23">
-        <div style="margin-left: 1000px;">
+        <div style="margin-left: 1000px">
           <img class="fleur" src="../assets/images/flore.png" alt="icon" />
         </div>
       </div>
       <div data-kinesistransformer-element data-ks-transform="translate" data-ks-strength="-15">
-        <div style="margin-right: 600px;">
+        <div style="margin-right: 600px">
           <img class="fleur" src="../assets/images/flore.png" alt="icon" />
         </div>
       </div>
       <div data-kinesistransformer-element data-ks-transform="translate" data-ks-strength="-25">
-        <div style="margin-left: 600px;">
+        <div style="margin-left: 600px">
           <img class="fleur" src="../assets/images/flore.png" alt="icon" />
         </div>
       </div>
@@ -72,16 +71,13 @@ const theme = ref(localStorage.getItem('theme') || 'light');
 </template>
 
 <style>
-
-
 .top {
   text-align: center;
   padding-bottom: 60px;
   align-items: center;
 }
 
-.job{
-  
+.job {
   text-shadow: 2px 2px 5px var(--shadow);
 }
 
@@ -93,105 +89,104 @@ const theme = ref(localStorage.getItem('theme') || 'light');
 
 .flower-center {
   position: absolute;
-  top: 50%;        
-  left: 50%;       
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  z-index: -10;      
+  z-index: -10;
 }
 
 .flower-center img {
-  width: 300px;   
+  width: 300px;
   height: 300px;
-  opacity: 0.3; 
+  opacity: 0.3;
 }
 .flower-left {
   position: absolute;
-  top: 3%;        
-  left: 3%;       
+  top: 3%;
+  left: 3%;
   transform: translate(-50%, -50%);
-  z-index: 0;      
+  z-index: 0;
 }
 
-
 .flower-left img {
-  width: 200px;   
+  width: 200px;
   height: 200px;
-  opacity: 0.3;   
+  opacity: 0.3;
   filter: blur(1px);
 }
 
 .flower-right {
   position: absolute;
-  top: 30%;        
-  right: 3%;       
+  top: 30%;
+  right: 3%;
   transform: translate(50%, -50%);
-  z-index: 0;      
+  z-index: 0;
 }
 
 .flower-right img {
-  width: 200px;   
+  width: 200px;
   height: 200px;
-  opacity: 0.3;   
+  opacity: 0.3;
   filter: blur(1px);
 }
 
 .flower-right-bas {
   position: absolute;
-  top: 75%;        
-  right: 35%;       
+  top: 75%;
+  right: 35%;
   transform: translate(50%, -50%);
-  z-index: 0;      
+  z-index: 0;
 }
 
 .flower-right-bas img {
   width: 70px;
   height: 70px;
-  opacity: 0.3;   
+  opacity: 0.3;
   filter: blur(1px);
 }
 
 .flower-left-bas {
   position: absolute;
-  top: 65%;        
-  left: 15%;       
+  top: 65%;
+  left: 15%;
   transform: translate(-50%, -50%);
-  z-index: 0;      
+  z-index: 0;
 }
 
 .flower-left-bas img {
   width: 70px;
   height: 70px;
-  opacity: 0.3;   
+  opacity: 0.3;
   filter: blur(1px);
 }
 
 .flower-right-haut {
   position: absolute;
-  top: 2%;        
-  right: 10%;       
+  top: 2%;
+  right: 10%;
   transform: translate(50%, -50%);
-  z-index: 0;      
+  z-index: 0;
 }
 
 .flower-right-haut img {
   width: 60px;
   height: 60px;
-  opacity: 0.3;   
+  opacity: 0.3;
   filter: blur(1px);
 }
 
 .flower-center-bas {
   position: absolute;
-  top: 100%;        
-  left: 50%;       
+  top: 100%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 0;      
+  z-index: 0;
 }
 
 .flower-center-bas img {
-  width: 150px;   
+  width: 150px;
   height: 150px;
-  opacity: 0.3;   
+  opacity: 0.3;
   filter: blur(1px);
 }
 </style>

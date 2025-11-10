@@ -2,7 +2,7 @@ import type { stepType } from '@/types/stepType'
 
 export const schoolData: stepType[] = [
   {
-    title: "Échange Erasmus Belgique",
+    title: 'Échange Erasmus Belgique',
     period: 'Septembre 2024 - Janvier 2025',
     description:
       'Bases de données (SQL et NoSQL); Développement mobile (Kotlin); Développement 3D (Rust)',

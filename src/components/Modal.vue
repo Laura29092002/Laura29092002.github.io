@@ -1,8 +1,7 @@
 <script setup lang="ts">
-
 const props = defineProps({
   popupVisible: { type: Boolean, default: false },
-  selectedSlide: { type: Object, default: () => ({}) }
+  selectedSlide: { type: Object, default: () => ({}) },
 })
 
 const emit = defineEmits(['update:popupVisible'])
@@ -14,24 +13,42 @@ function close() {
 
 <template>
   <div v-if="popupVisible" class="popup-overlay" @click.self="close">
-      <div class="popup-content">
-        <div class="popup-body">
-          <video v-if="selectedSlide.video" :key="selectedSlide.video" controls autoplay muted>
-            <source :src="selectedSlide.video" type="video/mp4">
-          </video>
-          <img v-else :src="selectedSlide.image" :alt="selectedSlide.title" />
+    <div class="popup-content">
+      <div class="popup-body">
+        <video v-if="selectedSlide.video" :key="selectedSlide.video" controls autoplay muted>
+          <source :src="selectedSlide.video" type="video/mp4" />
+        </video>
+        <img v-else :src="selectedSlide.image" :alt="selectedSlide.title" />
 
         <div class="popup-text">
-            <h3>{{ selectedSlide.title }}</h3>
-            <a :href="selectedSlide.link" target="_blank" v-if="selectedSlide.link">Lien github</a>
-            <p class="technologies"><strong class="strong">Technologies :</strong> {{ selectedSlide.technologies }}</p>
-            <p><strong class="strong">Description :</strong> {{ selectedSlide.description }}</p>
+          <h3>{{ selectedSlide.title }}</h3>
+          <a :href="selectedSlide.link" target="_blank" v-if="selectedSlide.link">Lien github</a>
+          <p class="technologies">
+            <strong class="strong">Technologies :</strong> {{ selectedSlide.technologies }}
+          </p>
+          <p><strong class="strong">Description :</strong> {{ selectedSlide.description }}</p>
         </div>
 
-        <button @click="close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
-        </div>
+        <button @click="close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-x-icon lucide-x"
+          >
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
       </div>
     </div>
+  </div>
 </template>
 
 <style scoped>
@@ -52,9 +69,9 @@ function close() {
   background: var(--bg-color);
   padding: 20px;
   border-radius: 15px;
-  max-width: 90%;         /* plus flexible sur petits écrans */
-  max-height: 60vh;       /* limite la hauteur */
-  overflow-y: auto;       /* ajoute un scroll vertical si le contenu dépasse */
+  max-width: 90%; /* plus flexible sur petits écrans */
+  max-height: 60vh; /* limite la hauteur */
+  overflow-y: auto; /* ajoute un scroll vertical si le contenu dépasse */
   box-sizing: border-box; /* évite le dépassement dû au padding */
   animation: fadeIn 0.3s ease;
 }
@@ -63,14 +80,14 @@ function close() {
   display: flex;
   gap: 15px;
   align-items: flex-start;
-  flex-wrap: wrap;        /* permet le retour à la ligne */
-  word-wrap: break-word;  /* casse les mots trop longs */
+  flex-wrap: wrap; /* permet le retour à la ligne */
+  word-wrap: break-word; /* casse les mots trop longs */
 }
 
 .popup-body img,
 .popup-body video {
   width: 50%;
-  max-width: 100%;        /* empêche le débordement horizontal */
+  max-width: 100%; /* empêche le débordement horizontal */
   height: auto;
 }
 
@@ -82,10 +99,9 @@ function close() {
   max-width: 100%;
 }
 
-
 a {
   color: var(--text-color);
-  word-break: break-all;  /* empêche les longs liens de déborder */
+  word-break: break-all; /* empêche les longs liens de déborder */
 }
 
 .technologies {
@@ -108,7 +124,7 @@ a {
 }
 
 .popup-content::-webkit-scrollbar {
-  width: 14px; 
+  width: 14px;
 }
 
 .popup-content::-webkit-scrollbar-track {
@@ -116,13 +132,13 @@ a {
 }
 
 .popup-content::-webkit-scrollbar-thumb {
-  background-color: var(--primary-color); 
+  background-color: var(--primary-color);
   border-radius: 30px;
   border: 3px solid var(--text-color);
 }
 
 .popup-content::-webkit-scrollbar-thumb:hover {
-  background-color: var(--secondary-color); 
+  background-color: var(--secondary-color);
 }
 
 /* Adaptation mobile */
@@ -141,7 +157,7 @@ a {
     text-align: center;
   }
 
-  h3{
+  h3 {
     font-size: 25px;
     color: var(--primary-color);
   }
@@ -157,5 +173,4 @@ a {
     transform: scale(1);
   }
 }
-
 </style>

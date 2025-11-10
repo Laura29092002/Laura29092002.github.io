@@ -11,6 +11,4 @@ import { RouterView } from 'vue-router'
   justify-content: center;
   align-items: center;
 }
-
-
 </style>

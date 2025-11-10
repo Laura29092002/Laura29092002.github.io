@@ -15,14 +15,13 @@ import { professionalData } from '@/staticData/professionalData'
     <div class="timeline-container" id="aboutMe">
       <h2 class="title">Parcours Scolaire</h2>
       <div class="flower-center-haut">
-      <img src="../assets/images/flore.png" alt="fleur centrale" />
-    </div>
-    <div class="flower-center">
-      <img src="../assets/images/flore.png" alt="fleur centrale" />
-    </div>
+        <img src="../assets/images/flore.png" alt="fleur centrale" />
+      </div>
+      <div class="flower-center">
+        <img src="../assets/images/flore.png" alt="fleur centrale" />
+      </div>
       <div class="timeline-vertical">
-        <div v-for="(step, index) in schoolData"
-          :key="index">
+        <div v-for="(step, index) in schoolData" :key="index">
           <School :step="step" />
         </div>
       </div>
@@ -46,8 +45,7 @@ import { professionalData } from '@/staticData/professionalData'
     <div class="timeline-container">
       <h2 class="title">Parcours Professionnel</h2>
       <div class="timeline-vertical">
-        <div v-for="(step, index) in professionalData"
-          :key="index">
+        <div v-for="(step, index) in professionalData" :key="index">
           <School :step="step" />
         </div>
       </div>
@@ -135,95 +133,93 @@ import { professionalData } from '@/staticData/professionalData'
   }
 }
 
-
 .flower-center-haut {
   position: absolute;
-  top: 15%;        
-  left: 70%;       
+  top: 15%;
+  left: 70%;
   transform: translate(-50%, -50%);
-  z-index: 0;      
+  z-index: 0;
 }
 
 .flower-center-haut img {
-  width: 50px;   
+  width: 50px;
   height: 50px;
-  opacity: 0.3;   
+  opacity: 0.3;
   filter: blur(1px);
 }
 
 .flower-center-haut-2 {
   position: absolute;
-  top: 45%;        
-  left: 35%;       
+  top: 45%;
+  left: 35%;
   transform: translate(-50%, -50%);
-  z-index: 0;      
+  z-index: 0;
 }
 
 .flower-center-haut-2 img {
-  width: 75px;   
+  width: 75px;
   height: 75px;
-  opacity: 0.3;   
+  opacity: 0.3;
   filter: blur(1px);
 }
 
 .flower-center {
   position: absolute;
-  top: 25%;        
-  left: 100%;       
+  top: 25%;
+  left: 100%;
   transform: translate(-50%, -50%);
-  z-index: 0;      
+  z-index: 0;
 }
 
 .flower-center img {
-  width: 50px;   
+  width: 50px;
   height: 50px;
-  opacity: 0.3;   
+  opacity: 0.3;
   filter: blur(1px);
 }
 
 .flower-center-bas {
   position: absolute;
-  top: 100%;        
-  left: 45%;       
+  top: 100%;
+  left: 45%;
   transform: translate(-50%, -50%);
-  z-index: 0;      
+  z-index: 0;
 }
 
 .flower-center-bas img {
-  width: 150px;   
+  width: 150px;
   height: 150px;
-  opacity: 0.3;   
+  opacity: 0.3;
   filter: blur(1px);
 }
 
 .flower-center-bas-2 {
   position: absolute;
-  top: 65%;        
-  left: 55%;       
+  top: 65%;
+  left: 55%;
   transform: translate(-50%, -50%);
-  z-index: 0;      
+  z-index: 0;
 }
 
 .flower-center-bas-2 img {
-  width: 75px;   
+  width: 75px;
   height: 75px;
-  opacity: 0.3;   
+  opacity: 0.3;
   filter: blur(1px);
 }
 
 .flower-bas {
   position: absolute;
-  top: 115%;        
-  left: 55%;       
+  top: 115%;
+  left: 55%;
   transform: translate(-50%, -50%);
-  z-index: 0;      
+  z-index: 0;
 }
 
 .flower-bas img {
-  width: 100px;   
+  width: 100px;
   height: 100px;
-  opacity: 0.3;   
+  opacity: 0.3;
   filter: blur(1px);
 }
-
 </style>

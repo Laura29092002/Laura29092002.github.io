@@ -2,7 +2,6 @@
 const indicator = document.querySelector('.nav-indicator') as HTMLElement | null
 const items = document.querySelectorAll<HTMLElement>('.nav-item')
 
-
 function handleIndicator(el: HTMLElement) {
   items.forEach((item) => {
     item.classList.remove('is-active')
@@ -12,12 +11,11 @@ function handleIndicator(el: HTMLElement) {
   const elementColor = 'pink'
   const target = el.dataset.target
 
-  if(indicator && indicator){
+  if (indicator && indicator) {
     indicator.style.width = `${el.offsetWidth}px`
     indicator.style.backgroundColor = elementColor
     indicator.style.left = `${el.offsetLeft}px`
   }
-  
 
   el.classList.add('is-active')
   el.style.color = elementColor
@@ -58,7 +56,9 @@ items.forEach((item) => {
       ACCUEIL
     </a>
     <a @click="$emit('goToSection', 'aboutMe')" class="nav-item" data-target="About me">A PROPOS</a>
-    <a @click="$emit('goToSection', 'projects')"  class="nav-item" data-target="My projects">MES PROJETS</a>
+    <a @click="$emit('goToSection', 'projects')" class="nav-item" data-target="My projects"
+      >MES PROJETS</a
+    >
     <a @click="$emit('goToSection', 'contact')" class="nav-item" data-target="Contact">CONTACT</a>
     <span class="nav-indicator"></span>
   </nav>
@@ -71,7 +71,7 @@ items.forEach((item) => {
 }
 
 nav {
-  white-space: nowrap; 
+  white-space: nowrap;
   margin-top: 10px;
   display: flex;
   overflow: hidden;

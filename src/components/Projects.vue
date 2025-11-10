@@ -6,7 +6,7 @@ import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
 import { projectData } from '@/staticData/projectData'
 
-import {Autoplay, EffectCoverflow, Pagination } from 'swiper/modules'
+import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules'
 import Modal from './Modal.vue'
 import type { projectType } from '@/types/projectType'
 
@@ -47,7 +47,7 @@ function openPopup(slide: projectType) {
         :modules="modules"
         class="mySwiper"
       >
-      <swiper-slide
+        <swiper-slide
           v-for="(slide, index) in projectData"
           :key="index"
           @click="openPopup(slide)"
@@ -63,7 +63,6 @@ function openPopup(slide: projectType) {
 </template>
 
 <style>
-
 .background {
   background: linear-gradient(var(--bg-color), var(--secondary-color), var(--bg-color));
   padding: 50px;
@@ -99,7 +98,7 @@ function openPopup(slide: projectType) {
 }
 
 @media (max-width: 630px) {
-  .swiper-slide{
+  .swiper-slide {
     width: 350px;
     height: 200px;
   }

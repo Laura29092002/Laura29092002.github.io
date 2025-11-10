@@ -6,7 +6,7 @@ import Steps from '@/components/Steps.vue'
 import Certification from '@/components/Certification.vue'
 import Toggle from '@/components/Toggle.vue'
 import NavigationBar from '@/components/NavigationBar.vue'
-const scrollToSection = (id : string) => {
+const scrollToSection = (id: string) => {
   const el = document.getElementById(id)
   if (el) {
     el.scrollIntoView({ behavior: 'smooth' })
@@ -24,8 +24,8 @@ const scrollToSection = (id : string) => {
     </div>
     <Top />
   </header>
-  <Steps/>
-  <Certification/>
+  <Steps />
+  <Certification />
   <Projects />
   <footer>
     <hr class="separator" />
@@ -34,8 +34,6 @@ const scrollToSection = (id : string) => {
 </template>
 
 <style scoped>
-
-
 header {
   top: 0;
   width: 100%;
@@ -43,7 +41,7 @@ header {
 
 .header-top {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 
 .nav-center {
@@ -59,7 +57,6 @@ footer {
   bottom: 0;
 }
 
-
 .separator {
   border: none;
   height: 2px;
@@ -68,5 +65,4 @@ footer {
   width: 20%;
   margin: 10px auto 20px auto;
 }
-
 </style>

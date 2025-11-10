@@ -17,7 +17,6 @@
   },
   "dependencies": {
     "@amineyarman/kinesis": "^1.0.6",
-    "floating-vue": "^5.2.2",
     "swiper": "^12.0.3",
     "vue": "^3.5.22",
     "vue-router": "^4.6.3"

@@ -5,7 +5,7 @@ export const professionalData: stepType[] = [
     title: 'Développeuse Full-Stack',
     period: '2025 -',
     description: '',
-    place: 'Solutec - Lyon (69009) - CDI',  
+    place: 'Solutec - Lyon (69009) - CDI',
   },
   {
     title: 'Développeuse Full-Stack',
@@ -20,7 +20,6 @@ export const professionalData: stepType[] = [
     description:
       'Développement de l’application mobile (Flutter);Intégration des maquettes UI/UX; Correction de bugs et optimisation des performances; Évaluation et amélioration de l’accessibilité numérique',
     place: 'Ezymob - Paris (75002) - Stage',
-    
   },
   {
     title: 'Développeuse Web',
@@ -29,5 +28,4 @@ export const professionalData: stepType[] = [
       "Création d'un site web avec une API (gestion des données); Création d'une application mobile android avec Flutter",
     place: 'Wess-Soft - Lyon (69009) - Stage',
   },
-  
 ]
