@@ -88,7 +88,7 @@ function close() {
 .popup-body video {
   width: 50%;
   max-width: 100%; /* empêche le débordement horizontal */
-  height: auto;
+  max-height: 55vh;
 }
 
 .popup-text {

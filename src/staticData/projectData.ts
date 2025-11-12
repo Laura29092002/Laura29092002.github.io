@@ -7,6 +7,8 @@ import videoCapteur from '@/assets/videos/capteur.mp4'
 import imageHelico from '@/assets/images/helico.png'
 import videoHelico from '@/assets/videos/helico.mp4'
 import imageEcam from '@/assets/images/ECAM.png'
+import imageFilm from '@/assets/images/film.png'
+import videoFilm from '@/assets/videos/film.mp4'
 import imageLicorne from '@/assets/images/licorne.png'
 import imageSLF from '@/assets/images/slf.png'
 
@@ -70,6 +72,15 @@ export const projectData: projectType[] = [
       "Développement d'une application mobile destinée à servir de portail pour les étudiants, facilitant l'accès aux informations académiques, aux ressources pédagogiques et aux services administratifs.",
     link: 'https://github.com/RISE-Remote-Intranet-School-Environment/RISE_PROJECT_TEAM_2',
     video: '',
+  },
+  {
+    title: 'Application mobile de films, séries et comics',
+    image: imageFilm,
+    technologies: 'Flutter',
+    description:
+      "Il s’agit d’une application mobile dont le but est de récupérer depuis une API externe des données de types : films, comics et séries. L’application permet d'afficher, de classer et de rechercher ces données.",
+    link: 'https://github.com/Laura29092002/ProjetProgrammationMobile',
+    video: videoFilm,
   },
   {
     title: 'Dashboard interactif pour la gestion de projets',
