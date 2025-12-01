@@ -5,6 +5,7 @@ import 'swiper/css'
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
 import { projectData } from '@/staticData/projectData'
+import type { Swiper as SwiperType } from 'swiper'
 
 import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules'
 import Modal from './Modal.vue'
@@ -12,13 +13,29 @@ import type { projectType } from '@/types/projectType'
 
 const pagination = { clickable: true }
 const modules = [Autoplay, EffectCoverflow, Pagination]
+const autoplay = {delay: 5000, disableOnInteraction: false}
 
 const popupVisible = ref(false)
 const selectedSlide = ref({})
+const swiperInstance = ref<SwiperType | null>(null)
+
+function onSwiper(swiper: SwiperType) {
+  swiperInstance.value = swiper
+}
 
 function openPopup(slide: projectType) {
   selectedSlide.value = slide
   popupVisible.value = true
+
+  if (swiperInstance.value?.autoplay) {
+    swiperInstance.value.autoplay.stop()
+  }
+}
+
+function closeModal() {
+  if (swiperInstance.value?.autoplay) {
+    swiperInstance.value.autoplay.start()
+  }
 }
 </script>
 
@@ -27,15 +44,13 @@ function openPopup(slide: projectType) {
     <h2 id="projects">Mes Projets</h2>
     <div class="background">
       <swiper
+      @swiper="onSwiper"
         :effect="'coverflow'"
         :loop="true"
         :grabCursor="true"
         :centeredSlides="true"
         :slidesPerView="'auto'"
-        :autoplay="{
-          delay: 5000,
-          disableOnInteraction: false,
-        }"
+        :autoplay="autoplay"
         :coverflowEffect="{
           rotate: 50,
           stretch: 0,
@@ -57,7 +72,7 @@ function openPopup(slide: projectType) {
           <p>{{ slide.title }}</p>
         </swiper-slide>
       </swiper>
-      <Modal v-model:popupVisible="popupVisible" :selectedSlide="selectedSlide" />
+      <Modal v-model:popupVisible="popupVisible" :selectedSlide="selectedSlide" @update:popupVisible="closeModal"/>
     </div>
   </div>
 </template>

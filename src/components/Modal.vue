@@ -9,6 +9,12 @@ const emit = defineEmits(['update:popupVisible'])
 function close() {
   emit('update:popupVisible', false)
 }
+function downloadFile(path : string) {
+      const link = document.createElement('a');
+      link.href = path;
+      link.download = 'Hélicoptère.f3d';
+      link.click();
+    }
 </script>
 
 <template>
@@ -22,14 +28,18 @@ function close() {
 
         <div class="popup-text">
           <h3>{{ selectedSlide.title }}</h3>
-          <a :href="selectedSlide.link" target="_blank" v-if="selectedSlide.link">Lien github</a>
+          <a :href="selectedSlide.link" target="_blank" v-if="selectedSlide.link && selectedSlide.title != 'Hélicoptère en 3D'">Lien github</a>
+          <button @click="downloadFile(selectedSlide.link)" v-if="selectedSlide.title == 'Hélicoptère en 3D'" class="download">
+            <p>Télécharger le fichier</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download-icon lucide-download"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
+          </button>
           <p class="technologies">
             <strong class="strong">Technologies :</strong> {{ selectedSlide.technologies }}
           </p>
           <p><strong class="strong">Description :</strong> {{ selectedSlide.description }}</p>
         </div>
 
-        <button @click="close">
+        <button @click="close" class="close">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -117,10 +127,13 @@ a {
 
 .popup-content button {
   margin-top: 10px;
-  background-color: var(--bg-color);
-  color: var(--primary-color);
   border: none;
   cursor: pointer;
+}
+
+.close{
+  background-color: var(--bg-color);
+  color: var(--primary-color);
 }
 
 .popup-content::-webkit-scrollbar {
@@ -139,6 +152,18 @@ a {
 
 .popup-content::-webkit-scrollbar-thumb:hover {
   background-color: var(--secondary-color);
+}
+
+.download{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--text-color);
+  border-radius: 30px;
+  padding: 0 20px;
+  color: var(--bg-color);
+  font-family: 'Nunito', sans-serif;
 }
 
 /* Adaptation mobile */

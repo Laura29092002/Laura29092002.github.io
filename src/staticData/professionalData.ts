@@ -3,7 +3,7 @@ import type { stepType } from '@/types/stepType'
 export const professionalData: stepType[] = [
   {
     title: 'Développeuse Full-Stack',
-    period: '2025 -',
+    period: 'Depuis 2025',
     description: '',
     place: 'Solutec - Lyon (69009) - CDI',
   },

@@ -12,6 +12,7 @@ export default defineConfig({
     vueJsx(),
     vueDevTools(),
   ],
+  assetsInclude: ['**/*.f3d'],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

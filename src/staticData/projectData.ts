@@ -6,6 +6,7 @@ import imageCapteur from '@/assets/images/capteur.png'
 import videoCapteur from '@/assets/videos/capteur.mp4'
 import imageHelico from '@/assets/images/helico.png'
 import videoHelico from '@/assets/videos/helico.mp4'
+import fileHelico from '@/assets/project/Hélicoptère.f3d'
 import imageEcam from '@/assets/images/ECAM.png'
 import imageFilm from '@/assets/images/film.png'
 import videoFilm from '@/assets/videos/film.mp4'
@@ -16,8 +17,8 @@ export const projectData: projectType[] = [
   {
     title: "Site d'e-commerce",
     image: imageSLF,
-    technologies: 'HTML/ CSS/ PHP',
-    description: "Concevoir et développer un site web e-commerce spécialisé dans la vente de vêtements. L’objectif principal est de créer une plateforme intuitive et moderne permettant à la fois aux vendeurs de proposer leurs produits et aux clients d’effectuer leurs achats facilement.",
+    technologies: 'HTML / CSS / PHP',
+    description: "Concevoir et développer un site web e-commerce spécialisé dans la vente, permettant à la fois aux vendeurs de proposer leurs produits et aux clients d’effectuer leurs achats facilement.",
     link: 'https://github.com/Laura29092002/SLF',
     video: '',
   },
@@ -33,17 +34,17 @@ export const projectData: projectType[] = [
   {
     title: 'Application de recettes',
     image: imageSizzleAndStudy,
-    technologies: 'PHP/ HTML/ CSS/ SQL',
+    technologies: 'PHP / HTML / CSS / SQL',
     description:
-      "Développement d'un site web interactif permettant aux utilisateurs de consulter, rechercher et gérer des recettes de cuisine, avec un espace personnel et un chatbot pour faciliter la découverte de recettes.",
+      "Développement d'un site web interactif permettant aux utilisateurs de consulter, rechercher et gérer des recettes de cuisine. L'application contient également un chatbot proposant des recettes en fonction des ingrédients que vous avez.",
     link: '',
     video: '',
   },
   {
     title: 'Dashboard de capteurs',
     image: imageCapteur,
-    technologies: 'ReactJS',
-    description: "Développement d'un dashboard de gestion d'un parc informatique.",
+    technologies: 'ReactJS / MongoDB',
+    description: "Développement d'un dashboard de gestion d'un parc informatique permettant de suivre et d'afficher des métriques de différents capteurs. Une partie administrateur permet d'ajouter, de modifier et de supprimer ces appareils et utilisateurs.",
     link: 'https://gitlab.com/tw-ece-paris/promo-2023/gr-02/prj-pei-tw-2023-01-moutoussamy-mussard',
     video: videoCapteur,
   },
@@ -52,7 +53,7 @@ export const projectData: projectType[] = [
     image: imageAR,
     technologies: 'Unity / Blender',
     description:
-      "En scannant un plat dans un menu de restaurant, l'application permet de voir le plat en 3D avec ses allergènes, sa composition et son poids en calories.",
+      "En scannant un menu de restaurant, l'application permet de visualiser les plats en 3D ainsi que ses allergènes, sa composition et son poids en calories.",
     link: '',
     video: '',
   },
@@ -60,8 +61,8 @@ export const projectData: projectType[] = [
     title: 'Hélicoptère en 3D',
     image: imageHelico,
     technologies: 'Fusion360',
-    description: "Création d'un modèle d'hélicoptère en 3D.",
-    link: '',
+    description: "Création d'un modèle d'hélicoptère en 3D sur l'outil Fusion 360.",
+    link: fileHelico,
     video: videoHelico,
   },
   {
@@ -78,7 +79,7 @@ export const projectData: projectType[] = [
     image: imageFilm,
     technologies: 'Flutter',
     description:
-      "Il s’agit d’une application mobile dont le but est de récupérer depuis une API externe des données de types : films, comics et séries. L’application permet d'afficher, de classer et de rechercher ces données.",
+      "Développement d’une application mobile dont le but est de récupérer depuis une API externe des données de types : films, comics et séries. L’application permet d'afficher, de classer et de rechercher ces données.",
     link: 'https://github.com/Laura29092002/ProjetProgrammationMobile',
     video: videoFilm,
   },
@@ -88,7 +89,7 @@ export const projectData: projectType[] = [
     technologies:
       'Angular / Java (Spring Boot) / JPA/Hibernate / PostgreSQL / ECharts / Maven / Karma / Jasmine / SonarQube',
     description:
-      "Conception et développement d'une application web complète pour la gestion et le suivi de projets, intégrant un dashboard interactif, une API REST, ainsi qu'une méthodologie de développement structurée axée sur la qualité du code et les bonnes pratiques agiles.",
+      "Conception et développement d'une application web pour la gestion et le suivi de projets, intégrant un dashboard interactif, une API REST, ainsi qu'une méthodologie de développement structurée axée sur la qualité du code et les bonnes pratiques agiles.",
     link: '',
     video: '',
   },
