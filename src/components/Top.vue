@@ -37,7 +37,7 @@ const theme = ref(localStorage.getItem('theme') || 'light')
         </div>
       </div>
       <div data-kinesistransformer-element data-ks-transform="translate" data-ks-strength="23">
-        <div style="margin-left: 600px">
+        <div style="margin-left: 40%">
           <img class="fleur" src="../assets/images/flore.png" alt="icon" />
         </div>
       </div>
@@ -52,7 +52,7 @@ const theme = ref(localStorage.getItem('theme') || 'light')
         <h2 class="job">Développeuse Full-Stack</h2>
       </div>
       <div data-kinesistransformer-element data-ks-transform="translate" data-ks-strength="23">
-        <div style="margin-left: 1000px">
+        <div style="margin-left: 80%">
           <img class="fleur" src="../assets/images/flore.png" alt="icon" />
         </div>
       </div>
@@ -62,7 +62,7 @@ const theme = ref(localStorage.getItem('theme') || 'light')
         </div>
       </div>
       <div data-kinesistransformer-element data-ks-transform="translate" data-ks-strength="-25">
-        <div style="margin-left: 600px">
+        <div style="margin-left: 40%">
           <img class="fleur" src="../assets/images/flore.png" alt="icon" />
         </div>
       </div>

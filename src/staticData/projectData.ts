@@ -6,12 +6,14 @@ import imageCapteur from '@/assets/images/capteur.png'
 import videoCapteur from '@/assets/videos/capteur.mp4'
 import imageHelico from '@/assets/images/helico.png'
 import videoHelico from '@/assets/videos/helico.mp4'
-import fileHelico from '@/assets/project/Hélicoptère.f3d'
 import imageEcam from '@/assets/images/ECAM.png'
 import imageFilm from '@/assets/images/film.png'
 import videoFilm from '@/assets/videos/film.mp4'
 import imageLicorne from '@/assets/images/licorne.png'
 import imageSLF from '@/assets/images/slf.png'
+
+const fileHelico = '/Hélicoptère.f3d'
+
 
 export const projectData: projectType[] = [
   {

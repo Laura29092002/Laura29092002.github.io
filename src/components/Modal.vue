@@ -80,7 +80,7 @@ function downloadFile(path : string) {
   padding: 20px;
   border-radius: 15px;
   max-width: 90%; /* plus flexible sur petits écrans */
-  max-height: 60vh; /* limite la hauteur */
+  height: 60vh; /* limite la hauteur */
   overflow-y: auto; /* ajoute un scroll vertical si le contenu dépasse */
   box-sizing: border-box; /* évite le dépassement dû au padding */
   animation: fadeIn 0.3s ease;

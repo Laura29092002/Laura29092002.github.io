@@ -120,4 +120,5 @@ nav {
 svg {
   color: var(--text-color);
 }
+
 </style>
