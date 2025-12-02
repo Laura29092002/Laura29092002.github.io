@@ -52,7 +52,7 @@ const theme = ref(localStorage.getItem('theme') || 'light')
         <h2 class="job">Développeuse Full-Stack</h2>
       </div>
       <div data-kinesistransformer-element data-ks-transform="translate" data-ks-strength="23">
-        <div style="margin-left: 80%">
+        <div style="margin-left: 70%">
           <img class="fleur" src="../assets/images/flore.png" alt="icon" />
         </div>
       </div>
@@ -188,5 +188,11 @@ const theme = ref(localStorage.getItem('theme') || 'light')
   height: 150px;
   opacity: 0.3;
   filter: blur(1px);
+}
+
+@media screen and (max-width: 768px) {
+  .flower-right{
+    display: none;
+  }
 }
 </style>

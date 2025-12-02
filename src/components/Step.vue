@@ -28,7 +28,7 @@ p {
   position: relative;
   padding: 1rem;
   transition: all 0.3s ease;
-  width: 400px;
+  max-width: 400px;
 }
 
 .date {

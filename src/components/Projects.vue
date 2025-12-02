@@ -78,6 +78,7 @@ function closeModal() {
 </template>
 
 <style>
+
 .background {
   background: linear-gradient(var(--bg-color), var(--secondary-color), var(--bg-color));
   padding: 50px;

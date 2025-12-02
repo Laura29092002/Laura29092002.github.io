@@ -4,7 +4,6 @@ import Contact from '@/components/Contact.vue'
 import Projects from '@/components/Projects.vue'
 import Steps from '@/components/Steps.vue'
 import Certification from '@/components/Certification.vue'
-import Toggle from '@/components/Toggle.vue'
 import NavigationBar from '@/components/NavigationBar.vue'
 const scrollToSection = (id: string) => {
   const el = document.getElementById(id)
@@ -16,12 +15,8 @@ const scrollToSection = (id: string) => {
 
 <template>
   <header>
-    <div class="header-top">
-      <div class="nav-center">
-        <NavigationBar @goToSection="scrollToSection" />
-      </div>
-      <Toggle />
-    </div>
+      
+      <NavigationBar @goToSection="scrollToSection" />
     <Top />
   </header>
   <Steps />
@@ -44,11 +39,6 @@ header {
   justify-content: space-between;
 }
 
-.nav-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
 header .app-container {
   margin-left: auto;
 }
