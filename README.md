@@ -1,4 +1,4 @@
-# 🌸 Laura's Portfolio (laura_project_2)
+# 🌸 Laura's Portfolio 
 
 A personal portfolio built with **Vue.js**, showcasing my projects, skills, and professional journey.
 
