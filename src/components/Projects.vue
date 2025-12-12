@@ -16,10 +16,8 @@ const pagination = { clickable: true }
 const modules = [Autoplay, EffectCoverflow, Pagination, Keyboard, A11y, Navigation]
 const autoplay = {delay: 5000, disableOnInteraction: false}
 const keyboard = {enabled: true, onlyInViewport: false, pageUpDown: true}
-const navigation = {
-  nextEl: '.swiper-button-next',
-  prevEl: '.swiper-button-prev',
-}
+const navigation = true
+
 
 const a11y = {
   enabled: true,
@@ -56,6 +54,7 @@ function closeModal() {
     swiperInstance.value.autoplay.start()
   }
 }
+
 </script>
 
 <template>
@@ -63,7 +62,7 @@ function closeModal() {
     <h2 id="projects">Mes Projets</h2>
     <div class="background">
       <swiper
-      @swiper="onSwiper"
+        @swiper="onSwiper"
         :effect="'coverflow'"
         :loop="true"
         :grabCursor="true"
@@ -93,17 +92,12 @@ function closeModal() {
           <img :src="slide.image" :alt="slide.title" />
           <p>{{ slide.title }}</p>
         </swiper-slide>
-        
       </swiper>
-     
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-  
       <Modal v-model:popupVisible="popupVisible" :selectedSlide="selectedSlide" @update:popupVisible="closeModal"/>
     </div>
-    
   </div>
 </template>
+
 
 <style>
 
@@ -112,7 +106,7 @@ function closeModal() {
   padding: 50px;
 }
 .swiper {
-  width: 80%;
+  width: 95%;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -150,6 +144,11 @@ function closeModal() {
   width: 20px;
   padding: 10px;
  
+}
+
+.swiper-button-next{
+  position: absolute;
+  top:50%
 }
 
 
