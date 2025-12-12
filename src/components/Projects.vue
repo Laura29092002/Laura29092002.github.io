@@ -93,11 +93,15 @@ function closeModal() {
           <img :src="slide.image" :alt="slide.title" />
           <p>{{ slide.title }}</p>
         </swiper-slide>
+        
+      </swiper>
+     
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
-      </swiper>
+  
       <Modal v-model:popupVisible="popupVisible" :selectedSlide="selectedSlide" @update:popupVisible="closeModal"/>
     </div>
+    
   </div>
 </template>
 
@@ -139,15 +143,19 @@ function closeModal() {
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: var(--primary-color);
+  color: var(--bg-color);
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
   padding: 10px;
+ 
 }
 
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
   background-color: var(--shadow);
-  border-radius: 50%;
 }
 
 
@@ -155,6 +163,10 @@ function closeModal() {
   .swiper-slide {
     width: 350px;
     height: 200px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
   }
 }
 
