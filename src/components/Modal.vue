@@ -80,7 +80,7 @@ function downloadFile(path : string) {
   padding: 20px;
   border-radius: 15px;
   max-width: 90%; /* plus flexible sur petits écrans */
-  height: 60vh; /* limite la hauteur */
+  max-height: 50vh; /* limite la hauteur */
   overflow-y: auto; /* ajoute un scroll vertical si le contenu dépasse */
   box-sizing: border-box; /* évite le dépassement dû au padding */
   animation: fadeIn 0.3s ease;
@@ -96,8 +96,8 @@ function downloadFile(path : string) {
 
 .popup-body img,
 .popup-body video {
-  width: 50%;
-  max-width: 100%; /* empêche le débordement horizontal */
+  width: 40%;
+  max-width: 80%; /* empêche le débordement horizontal */
   max-height: 55vh;
 }
 
