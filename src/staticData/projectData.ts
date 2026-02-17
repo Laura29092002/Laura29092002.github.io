@@ -1,7 +1,8 @@
 import type { projectType } from '@/types/projectType'
 import imageAR from '@/assets/images/AR.png'
 import imageMessagerie from '@/assets/images/messagerie.png'
-import imageSizzleAndStudy from '@/assets/images/sizzleandstudy.png'
+//import imageSizzleAndStudy from '@/assets/images/sizzleandstudy.png'
+import imageWeeklyMeals from '@/assets/images/weekly-meals.png'
 import imageCapteur from '@/assets/images/capteur.png'
 import videoCapteur from '@/assets/videos/capteur.mp4'
 import imageHelico from '@/assets/images/helico.png'
@@ -36,12 +37,12 @@ export const projectData: projectType[] = [
     video: '',
   },
   {
-    title: 'Sizzle&Study - Application de recettes',
-    image: imageSizzleAndStudy,
-    technologies: 'PHP / HTML / CSS / SQL',
+    title: 'Weekly Meals - Application de recettes',
+    image: imageWeeklyMeals,
+    technologies: 'ANGULAR / Java Spring Boot/ PostgreSQL',
     description:
-      "Développement d'un site web interactif permettant aux utilisateurs de consulter, rechercher et gérer des recettes de cuisine. L'application contient également un chatbot proposant des recettes en fonction des ingrédients que vous avez.",
-    link: '',
+      "Développement d'une application web permettant aux utilisateurs de plannifier ces recettes de la semaines et de générer des recettes de cuisine en fonction de ces préférences alimentaires (Végétarien, Vegan, Sans gluten, etc).",
+    link: 'https://github.com/Laura29092002/foodApp',
     video: '',
   },
   {
