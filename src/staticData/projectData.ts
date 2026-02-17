@@ -11,16 +11,18 @@ import imageFilm from '@/assets/images/film.png'
 import videoFilm from '@/assets/videos/film.mp4'
 import imageLicorne from '@/assets/images/licorne.png'
 import imageSLF from '@/assets/images/slf.png'
+import imageSNCF from '@/assets/images/figma-SNCF.png'
+import videoSNCF from '@/assets/videos/figma.mp4'
 
 const fileHelico = '/Hélicoptère.f3d'
 
 
 export const projectData: projectType[] = [
   {
-    title: "Site d'e-commerce",
+    title: "SLF - Plateforme de vente de vêtements",
     image: imageSLF,
     technologies: 'HTML / CSS / PHP',
-    description: "Concevoir et développer un site web e-commerce spécialisé dans la vente, permettant à la fois aux vendeurs de proposer leurs produits et aux clients d’effectuer leurs achats facilement.",
+    description: "Concevoir et développer un site web e-commerce spécialisé dans la vente de vêtements, permettant à la fois aux vendeurs de proposer leurs produits et aux clients d’effectuer leurs achats facilement.",
     link: 'https://github.com/Laura29092002/SLF',
     video: '',
   },
@@ -34,7 +36,7 @@ export const projectData: projectType[] = [
     video: '',
   },
   {
-    title: 'Application de recettes',
+    title: 'Sizzle&Study - Application de recettes',
     image: imageSizzleAndStudy,
     technologies: 'PHP / HTML / CSS / SQL',
     description:
@@ -43,19 +45,29 @@ export const projectData: projectType[] = [
     video: '',
   },
   {
-    title: 'Dashboard de capteurs',
+    title: "Dashboard de gestion d'un parc informatique",
     image: imageCapteur,
-    technologies: 'ReactJS / MongoDB',
+    technologies: 'ReactJS / NodeJS / MongoDB',
     description: "Développement d'un dashboard de gestion d'un parc informatique permettant de suivre et d'afficher des métriques de différents capteurs. Une partie administrateur permet d'ajouter, de modifier et de supprimer ces appareils et utilisateurs.",
     link: 'https://gitlab.com/tw-ece-paris/promo-2023/gr-02/prj-pei-tw-2023-01-moutoussamy-mussard',
     video: videoCapteur,
   },
   {
-    title: 'Visualisation de plat en AR',
+    title: 'LICORNE - Dashboard pour la gestion de projets',
+    image: imageLicorne,
+    technologies:
+      'Angular / Java (Spring Boot) / JPA/Hibernate / PostgreSQL / ECharts / Maven / Karma / Jasmine / SonarQube',
+    description:
+      "Conception et développement d'une application web pour la gestion et le suivi de projets, intégrant un dashboard interactif, une API REST, ainsi qu'une méthodologie de développement structurée axée sur la qualité du code et les bonnes pratiques agiles.",
+    link: '',
+    video: '',
+  },
+  {
+    title: 'AReal - Visualiser les plats en Réalité Augmentée',
     image: imageAR,
     technologies: 'Unity / Blender',
     description:
-      "En scannant un menu de restaurant, l'application permet de visualiser les plats en 3D ainsi que ses allergènes, sa composition et son poids en calories.",
+      "En scannant un menu de restaurant, l'application permet de visualiser les plats en 3D ainsi que ses allergènes, sa composition et son apport en calories.",
     link: '',
     video: '',
   },
@@ -68,7 +80,7 @@ export const projectData: projectType[] = [
     video: videoHelico,
   },
   {
-    title: 'Application mobile portail étudiant',
+    title: "Portail étudiant - Application pour l'ECAM",
     image: imageEcam,
     technologies: 'Kotlin Compose MultiPlatform',
     description:
@@ -77,7 +89,7 @@ export const projectData: projectType[] = [
     video: '',
   },
   {
-    title: 'Application mobile de films, séries et comics',
+    title: 'CinéCosmo - Application de films, comics et séries',
     image: imageFilm,
     technologies: 'Flutter',
     description:
@@ -86,13 +98,13 @@ export const projectData: projectType[] = [
     video: videoFilm,
   },
   {
-    title: 'Dashboard interactif pour la gestion de projets',
-    image: imageLicorne,
-    technologies:
-      'Angular / Java (Spring Boot) / JPA/Hibernate / PostgreSQL / ECharts / Maven / Karma / Jasmine / SonarQube',
+    title: 'Prototype FIGMA - Réplique site SNCF',
+    image: imageSNCF,
+    technologies: 'FIGMA',
     description:
-      "Conception et développement d'une application web pour la gestion et le suivi de projets, intégrant un dashboard interactif, une API REST, ainsi qu'une méthodologie de développement structurée axée sur la qualité du code et les bonnes pratiques agiles.",
+      "Réplique complète du site de la SNCF dans FIGMA à but de formation à l'outil.",
     link: '',
-    video: '',
+    video: videoSNCF,
   },
+  
 ]
