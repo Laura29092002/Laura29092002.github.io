@@ -15,10 +15,10 @@ export const professionalData: stepType[] = [
     place: 'Solutec - Lyon (69009) - Stage',
   },
   {
-    title: 'Développeuse Mobile Native',
+    title: 'Développeuse Frontend (React) et Mobile',
     period: 'Avril 2024 - Août 2025 (5 mois)',
     description:
-      'Développement de l’application mobile (Flutter);Intégration des maquettes UI/UX; Correction de bugs et optimisation des performances; Évaluation et amélioration de l’accessibilité numérique',
+      'Développement de l’interface web (React);Développement de l’application mobile (Flutter);Intégration des maquettes UI/UX; Correction de bugs et optimisation des performances; Évaluation et amélioration de l’accessibilité numérique',
     place: 'Ezymob - Paris (75002) - Stage',
   },
   {
