@@ -50,7 +50,7 @@ export const projectData: projectType[] = [
     image: imageCapteur,
     technologies: 'ReactJS / NodeJS / MongoDB',
     description: "Développement d'un dashboard de gestion d'un parc informatique permettant de suivre et d'afficher des métriques de différents capteurs. Une partie administrateur permet d'ajouter, de modifier et de supprimer ces appareils et utilisateurs.",
-    link: 'https://gitlab.com/tw-ece-paris/promo-2023/gr-02/prj-pei-tw-2023-01-moutoussamy-mussard',
+    link: '',
     video: videoCapteur,
   },
   {
