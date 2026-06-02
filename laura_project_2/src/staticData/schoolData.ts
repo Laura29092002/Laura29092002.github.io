@@ -2,6 +2,13 @@ import type { schoolStep } from '@/types/stepType'
 
 export const schoolData: schoolStep[] = [
   {
+    title: "Formation Cypress",
+    period: 'Mai 2026',
+    description:
+      "Formation sur l'outil Cypress dispensée par un expert interne",
+    place: 'Solutec - Lyon (69009)',
+  },
+  {
     title: "Échange Erasmus Belgique",
     period: 'Septembre 2024 - Janvier 2025',
     description:
