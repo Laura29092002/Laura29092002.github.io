@@ -2,6 +2,14 @@ import type { projectType } from "@/types/projectType";
 
 export const projectData : projectType[] = [
     {
+        title: "Hackathon - Traducteur de langue des signes",
+        image: '../src/assets/images/hackathon.png',
+        technologies: 'React/ Mistral AI/ Bedrock/ OpenCV',
+        description: "Développement d'un outil qui traduit du contenu audio ou vidéo en langues des signes via de l'intelligence artificielle.",
+        link: "",
+        video: "../src/assets/videos/hackathon.mp4"
+    },
+    {
         title: "Application de bureau - Messagerie instantanée",
         image: '../src/assets/images/messagerie.png',
         technologies: 'Java Swing / Web Sockets / AWS',
